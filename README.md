@@ -1,3 +1,5 @@
+[العربية](README.ar.md)
+
 # mhma_inventory
 
 Custom Odoo module to extend and enhance inventory management features.
