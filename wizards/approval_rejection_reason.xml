@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="approval_rejection_reason_form" model="ir.ui.view">
+        <field name="name">Approval Rejection Reason Form</field>
+        <field name="model">mhma.approval.rejection.reason</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="approval_request_id"/>
+                    <field name="request_owner_id"/>
+                    <field name="rejection_reason"/>
+                </group>
+                <footer>
+                    <button name="action_reject" string="Reject" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="approval_rejection_reason_action" model="ir.actions.act_window">
+        <field name="name">Approval Rejection Reason Action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mhma.approval.rejection.reason</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

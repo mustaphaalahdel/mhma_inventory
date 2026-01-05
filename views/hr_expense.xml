@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="hr_expense_form_my_edit" model="ir.ui.view">
+        <field name="name">hr expense form my edit</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
+        <field name="arch" type="xml">
+
+            <button name="action_split_wizard" position="after">
+                <button type="object" 
+                    name="action_reminder_recipient" class="btn-warning" string="Reminder recipient"
+                    invisible="state in ['refused']  or recipient_id == 0 or reminder_recipient == 1 or confirm_receipt or employee2_user_id != uid "></button>
+                <button type="object" 
+                    name="action_reminder_recipient" class="btn-secondary"
+                    string="Reminder recipient"
+                    invisible="state in ['refused'] or recipient_id == 0 or reminder_recipient == 0 or confirm_receipt or employee2_user_id != uid  "></button>
+                <!-- <button type="object" 
+                    name="action_reminder_recipient" class="btn-warning" string="Reminder recipient"
+                    groups='hr_expense.group_hr_expense_manager,mhma_inventory.inventory_dev_group'
+                    invisible="state in ['refused']  or recipient_id == 0 or reminder_recipient == 1 or confirm_receipt "></button>
+                <button type="object"
+                    name="action_reminder_recipient" class="btn-secondary"
+                    groups='hr_expense.group_hr_expense_manager,mhma_inventory.inventory_dev_group'
+                    string="Reminder recipient"
+                    invisible="state in ['refused'] or recipient_id == 0 or reminder_recipient == 0 or confirm_receipt "></button> -->
+                
+                <!-- <button type="object" name="schedule_grant_approval" string="Grant Approval"
+                ></button> -->
+                <button type="object" name="action_confirm_receipt" class="btn-warning"
+                    string="Received Done"
+                    invisible="state in ['refused']  or confirm_receipt or recipient_id != uid" />
+            </button>
+
+
+            <xpath expr="//group[1]" position="after">
+                <group name="approval" string="Approval">
+                    <group>
+                        <field name="approval_request_need_id" force_save="1" />
+                        <field name="approval_direct_purchase_id" />
+                        <field name="reminder_recipient" groups='hr_expense.group_hr_expense_manager,mhma_inventory.inventory_dev_group' />
+                        <field name="reminder_recipient" invisible="1" />
+                        <field name="employee2_id" />
+                        <field name="employee2_user_id" />
+                    </group>
+                    <group>
+                        <field name="beneficiary_id" />
+                        <field name="recipient_id" />
+                        <field name="supplier_id" />
+                        <field name="confirm_receipt" groups='hr_expense.group_hr_expense_manager,mhma_inventory.inventory_dev_group' />
+                        <field name="confirm_receipt" invisible="1" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,38 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sk_purchase_order,MHMA StockKeeper Purchase Order,purchase.model_purchase_order,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_product_template,MHMA StockKeeper Product Template,product.model_product_template,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_stock_picking,MHMA StockKeeper Stock Picking,stock.model_stock_picking,mhma_inventory.mhma_stock_keeper,1,1,0,0
+access_sk_stock_move,MHMA StockKeeper Stock Move,stock.model_stock_move,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_stock_lot,MHMA StockKeeper Stock Lot,stock.model_stock_lot,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_product_product,MHMA StockKeeper Product Variant,product.model_product_product,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_mhma_demand_product,MHMA StockKeeper Demand Product,mhma_inventory.model_mhma_demand_product,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_purchase_order_line,MHMA StockKeeper PO Line,purchase.model_purchase_order_line,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_stock_move_line,MHMA StockKeeper Stock Move Line,stock.model_stock_move_line,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_stock_quant,MHMA StockKeeper Stock Quant,stock.model_stock_quant,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_stock_warehouse_orderpoint,MHMA StockKeeper Reordering Rule,stock.model_stock_warehouse_orderpoint,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_stock_rule,MHMA StockKeeper Stock Rule,stock.model_stock_rule,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_stock_package_level,MHMA StockKeeper Package Level,stock.model_stock_package_level,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_stock_picking_type,MHMA StockKeeper Picking Type,stock.model_stock_picking_type,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_stock_location,MHMA StockKeeper Stock Location,stock.model_stock_location,mhma_inventory.mhma_stock_keeper,1,0,0,0
+
+access_sk_return_picking,MHMA StockKeeper Return Picking,stock.model_stock_return_picking,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_return_picking_line,MHMA StockKeeper Return Picking Line,stock.model_stock_return_picking_line,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_backorder_confirm,MHMA StockKeeper Backorder Confirmation,stock.model_stock_backorder_confirmation,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_backorder_confirm_line,MHMA StockKeeper Backorder Confirmation Line,stock.model_stock_backorder_confirmation_line,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_assign_serial,MHMA StockKeeper Assign Serial,stock.model_stock_assign_serial,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_warn_uncomplete_move,MHMA StockKeeper Repair Warn Uncomplete Move,repair.model_repair_warn_uncomplete_move,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_warn_qty_scrap,MHMA StockKeeper Warn Qty Scrap,stock.model_stock_warn_insufficient_qty_scrap,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_warn_qty_repair,MHMA StockKeeper Warn Qty Repair,repair.model_stock_warn_insufficient_qty_repair,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_product_replenish,MHMA StockKeeper Product Replenish,stock.model_product_replenish,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_scheduler_compute,MHMA StockKeeper Scheduler Compute,stock.model_stock_scheduler_compute,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_change_product_qty,MHMA StockKeeper Change Product Qty,stock.model_stock_change_product_qty,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_traceability_report,MHMA StockKeeper Traceability Report,stock.model_stock_traceability_report,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_rules_report,MHMA StockKeeper Rules Report,stock.model_stock_rules_report,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_quantity_history,MHMA StockKeeper Quantity History,stock.model_stock_quantity_history,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_delivery_carrier,MHMA StockKeeper Delivery Carrier,delivery.model_delivery_carrier,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_choose_delivery_package,MHMA StockKeeper Choose Delivery Package,stock_delivery.model_choose_delivery_package,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_choose_delivery_carrier,MHMA StockKeeper Choose Delivery Carrier,delivery.model_choose_delivery_carrier,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_orderpoint_snooze,MHMA StockKeeper Orderpoint Snooze,stock.model_stock_orderpoint_snooze,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_barcode_nomenclature,MHMA StockKeeper Barcode Nomenclature,barcodes.model_barcode_nomenclature,mhma_inventory.mhma_stock_keeper,1,0,0,0
+access_sk_import_wizard,MHMA StockKeeper Picking Import Wizard,mhma_stock_picking_import.model_mhma_stock_picking_import_wizard,mhma_inventory.mhma_stock_keeper,1,1,1,0
+access_sk_import_wizard_line,MHMA StockKeeper Picking Import Wizard Line,mhma_stock_picking_import.model_mhma_stock_picking_import_wizard_line,mhma_inventory.mhma_stock_keeper,1,1,1,0

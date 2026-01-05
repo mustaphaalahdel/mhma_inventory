@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- جذر المخزون -->
+    <record id="stock.menu_stock_root" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+    <!-- تكوين المخازن -->
+    <record id="stock.menu_warehouse_config" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+    <!-- قواعد إعادة التوريد / التزويد -->
+    <record id="stock.menu_reordering_rules_replenish" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+    <!-- التقارير -->
+    <record id="stock.menu_warehouse_report" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+    <!-- إعدادات المخزون العامة -->
+    <record id="stock.menu_stock_config_settings" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+    <!-- التسليم -->
+    <record id="stock.menu_delivery" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+    <!-- الوارد/الصادر — إذا كانت هذه IDs لقوائم عندك فعلاً، أبْقِها -->
+    <record id="stock.in_picking" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+    <record id="stock.out_picking" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+    <!-- بدائل شائعة للوارد/الصادر (استعملها فقط إن سقطت الأسطر أعلاه عندك) -->
+    <!--
+    <record id="stock.menu_action_picking_tree_in" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+    <record id="stock.menu_action_picking_tree_out" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+    -->
+
+    <!-- قوائمك المخصصة -->
+    <record id="mhma_inventory.menu_stock_move_valuation" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+    <record id="mhma_inventory.menu_inventory_mhma" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+    </record>
+
+  </data>
+</odoo>

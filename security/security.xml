@@ -1,0 +1,202 @@
+<odoo>
+    <data noupdate="0">
+        <!-- Category: Purchase and Inventory -->
+        <record id="module_category_mhma_purchase_inventory" model="ir.module.category">
+            <field name="name">Purchase and Inventory</field>
+            <field name="description">Groups for Purchase and Inventory (MHMA)</field>
+            <field name="sequence">35</field>
+            <!-- اختياري: لو حاب تصنّفها تحت قسم أعلى -->
+            <!-- <field name="parent_id" ref="base.module_category_operations"/> -->
+        </record>
+
+
+        <record id="request_owner_control_group" model="res.groups">
+            <field name="name">Request Owner Control</field>
+        </record>
+        <record id="stock_keeper_approval_group" model="res.groups">
+            <field name="name">Stock keeper Approval</field>
+        </record>
+        <record id="request_items_needed_group" model="res.groups">
+            <field name="name">Request Items needed</field>
+        </record>
+        <record id="request_procurement_group" model="res.groups">
+            <field name="name">Request Procurement</field>
+        </record>
+        <record id="control_in_approvers_group" model="res.groups">
+            <field name="name">Control in approvers</field>
+        </record>
+        <record id="specify_specification_items_group" model="res.groups">
+            <field name="name">Specify Specification Items</field>
+        </record>
+        <record id="purchase_dev_group" model="res.groups">
+            <field name="name">Purchase Developer</field>
+        </record>
+        <record id="inventory_dev_group" model="res.groups">
+            <field name="name">Inventory Developer</field>
+        </record>
+        <record id="purchasing_directive_group" model="res.groups">
+            <field name="name">Purchasing Directive</field>
+        </record>
+        <record id="disbursing_directive_group" model="res.groups">
+            <field name="name">Disbursing Directive</field>
+        </record>
+
+        <record id="mhma_purchase_read_only_all_group" model="res.groups">
+            <field name="name">MHMA Purchase Read Only</field>
+            <field name="category_id" ref="mhma_inventory.module_category_mhma_purchase_inventory" />
+        </record>
+        <record id="mhma_inventory_read_only_all_group" model="res.groups">
+            <field name="name">MHMA Inventory Read Only</field>
+            <field name="category_id" ref="mhma_inventory.module_category_mhma_purchase_inventory" />
+        </record>
+
+        <record id="mhma_purchase_officer" model="res.groups">
+            <field name="name">MHMA Purchase Officer</field>
+            <field name="category_id" ref="mhma_inventory.module_category_mhma_purchase_inventory" />
+            <field name="implied_ids" eval="[(4, ref('mhma_inventory.mhma_purchase_read_only_all_group'))]"/>
+        </record>
+        <record id="mhma_stock_keeper" model="res.groups">
+            <field name="name">MHMA Stock Keeper</field>
+            <field name="category_id" ref="mhma_inventory.module_category_mhma_purchase_inventory" />
+            <field name="implied_ids" eval="[(4, ref('mhma_inventory.mhma_inventory_read_only_all_group'))]"/>
+        </record>
+        <record id="mhma_purchase_inventory_accountant" model="res.groups">
+            <field name="name">MHMA Purchase Inventory Accountant</field>
+            <field name="category_id" ref="mhma_inventory.module_category_mhma_purchase_inventory" />
+            <field name="implied_ids" eval="[(4, ref('mhma_inventory.mhma_stock_keeper'))]"/>
+        </record>
+        <record id="mhma_purchase_inventory_manager" model="res.groups">
+            <field name="name">MHMA Purchase Inventory Manager</field>
+            <field name="category_id" ref="mhma_inventory.module_category_mhma_purchase_inventory" />
+            <field name="implied_ids" eval="[(4, ref('mhma_inventory.mhma_purchase_officer')), (4, ref('mhma_inventory.mhma_stock_keeper'))]"/>
+            <!-- <field name="implied_ids" eval="[(4, ref('mhma_inventory.mhma_stock_keeper'))]"/> -->
+        </record>
+
+
+
+        <record id="approval_category_access_rule" model="ir.rule">
+            <field name="name">show approval category to access groups</field>
+            <field name="model_id" ref="model_approval_category" />
+            <field name="domain_force">['|', ('access_group_ids', 'in', user.groups_id.ids),
+                ('access_group_ids', '=', False)]</field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_create" eval="True" />
+            <field name="perm_unlink" eval="True" />
+        </record>
+
+        <record id="approval_request_read_all" model="ir.rule">
+            <field name="name">read all approval request</field>
+            <field name="model_id" ref="model_approval_request" />
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('mhma_inventory.control_in_approvers_group'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_create" eval="True" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+
+        <record id="approval_approver_read_all" model="ir.rule">
+            <field name="name">read all approval approver</field>
+            <field name="model_id" ref="model_approval_approver" />
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('mhma_inventory.control_in_approvers_group'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_create" eval="True" />
+            <field name="perm_unlink" eval="True" />
+        </record>
+
+        <record id="approval_approver_read_pending_user" model="ir.rule">
+            <field name="name">read pending user</field>
+            <field name="model_id" ref="model_approval_approver" />
+            <field name="domain_force">[('request_id.pending_user_id', '=', user.id)]</field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+
+        <record id="demand_product_group_access_rule" model="ir.rule">
+            <field name="name">show demand product to access groups</field>
+            <field name="model_id" ref="model_mhma_demand_product" />
+            <field name="domain_force">['|', ('access_group_ids', 'in', user.groups_id.ids),
+                ('access_group_ids', '=', False)]</field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_create" eval="True" />
+            <field name="perm_unlink" eval="True" />
+        </record>
+        <!-- Reading the request for need through directed -->
+        <record id="reading_the_request_for_need_through_directed" model="ir.rule">
+            <field name="name">reading the request for need through directed</field>
+            <field name="model_id" ref="model_approval_request" />
+            <field name="domain_force">[('dsbrs_ids.approver_ids.user_id','=', user.id),]</field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+        <record id="reading_the_request_for_need_through_pr" model="ir.rule">
+            <field name="name">reading the request for need through pr</field>
+            <field name="model_id" ref="model_approval_request" />
+            <field name="domain_force">[('req_purchase_ids.approver_ids.user_id','=', user.id),]</field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+
+        <record id="reading_directives_through_request" model="ir.rule">
+            <field name="name">reading directives through request</field>
+            <field name="model_id" ref="model_approval_request" />
+            <field name="domain_force">
+                [
+                '|',
+                ('dsbrs_id.create_uid','=', user.id),
+                ('dsbrs_id.request_owner_id','=', user.id),
+                ]
+            </field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+
+        <record id="reading_to_expense_beneficiary" model="ir.rule">
+            <field name="name">reading to expense beneficiary</field>
+            <field name="model_id" ref="model_hr_expense" />
+            <field name="domain_force">
+                [
+                '|', '|', '|', '|', '|',
+                ('beneficiary_id.user_ids','in', [user.id]),
+                ('recipient_id','=', user.id),
+                ('approval_request_need_id.create_uid','=', user.id),
+                ('approval_request_need_id.request_owner_id','=', user.id),
+                ('approval_direct_purchase_id.create_uid','=', user.id),
+                ('approval_direct_purchase_id.request_owner_id','=', user.id),
+                ]
+            </field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+    </data>
+</odoo>

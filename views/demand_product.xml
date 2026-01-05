@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="demand_product_tree_view" model="ir.ui.view">
+        <field name="name">demand.product.tree</field>
+        <field name="model">mhma.demand.product</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="desc"  optional="1" />
+                <!-- <field name="image" widget="image" optinal="1" /> -->
+                <field name="categ_id" />
+                <field name="uom_id" />
+                <field name="estimated_cost" />
+                <!-- <field name="desc" optinal="1" /> -->
+                <field name="type" />
+                <field name="create_uid" optional="1" />
+                <field name="create_date" optional="1" />
+                <field name="write_uid" optional="1" />
+                <field name="write_date" optional="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="demand_product_form_view" model="ir.ui.view">
+        <field name="name">demand.product.form</field>
+        <field name="model">mhma.demand.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    
+                    <field
+                        name="image"
+                        widget="image"
+                        class="oe_avatar"
+                        nolabel="1"
+                        options="{'image_preview': 'image_512'}"
+                    />
+
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h2>
+                            <field name="name" placeholder="Demand Product ..." />
+                        </h2>
+                    </div>
+                    <div class="oe_title">
+                        <label for="keywords" class="oe_edit_only" />
+                        <h2>
+                            <field name="keywords" placeholder="Keywords ..." />
+                        </h2>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="categ_id" />
+                            <field name="estimated_cost" />  
+                            <field name="desc" />  
+                        </group>
+                        <group>
+                            <field name="uom_id" />
+                            <field name="type" />
+                            <field name="access_group_ids" widget="many2many_tags" />    
+                        </group>
+                    </group>
+                    <!-- <div class="oe_title">
+                        <label for="detail"/>
+                        <field name="detail" placeholder="Detail ..." />
+                    </div> -->
+                    <group  string="Detail AS Template" >
+                        <field name="detail" placeholder="Detail ..." nolabel="1" colspan="2"  />
+                    </group>
+
+                </sheet>
+                <!-- chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_demand_products" model="ir.actions.act_window">
+        <field name="name">Demand Products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mhma.demand.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+</odoo>

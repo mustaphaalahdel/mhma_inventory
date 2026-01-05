@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="menu_approval_mhma"
+        name="Approval MHMA"
+        parent="approvals.approvals_menu_root"
+        groups="base.group_user"
+        sequence="11" />
+
+    <menuitem id="demand_products"
+        name="Demand Products"
+        parent="menu_approval_mhma"
+        sequence="1"
+        action="action_demand_products" />
+
+    <menuitem id="demand_products_lines"
+        name="Demand Products Lines"
+        parent="menu_approval_mhma"
+        sequence="2"
+        groups="mhma_inventory.inventory_dev_group"
+        action="action_demand_products_lines" />
+
+</odoo>

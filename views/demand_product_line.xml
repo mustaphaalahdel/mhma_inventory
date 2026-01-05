@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="demand_product_line_tree" model="ir.ui.view">
+        <field name="name">demand.product.line.tree</field>
+        <field name="model">mhma.demand.product.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="approval_request_id" />
+                <field name="purchase_order_id" />
+                <field name="demand_product_id" />
+                <field name="categ_id" optional="1" />
+                <field name="type" optional="1" />
+                <field name="desc" optional="1" />
+                <field name="qty" />
+                <field name="uom_id" />
+                <field name="estimate_cost" />
+                <field name="modified_desc" optional="1" />
+                <field name="modified_qty" />
+                <field name="modified_estimate_cost" />
+                <field name="total" />
+                <field name="state" string="Approval State" optional="1" />
+                <field name="purchase_state" string="Purchase State" optional="1" />
+                <field name="confirmed_demand_product_lines" optional="1" />
+                <field name="pending_user_id" optional="1" />
+                <field name="create_uid" optional="1" />
+                <field name="create_date" optional="1" />
+                <field name="write_uid" optional="1" />
+                <field name="write_date" optional="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="demand_product_line_form" model="ir.ui.view">
+        <field name="name">demand.product.line.form</field>
+        <field name="model">mhma.demand.product.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="approval_request_id" />
+                            <field name="purchase_order_id" />
+                            <field name="demand_product_id" />
+                            <field name="categ_id" />
+                            <field name="uom_id" />
+                            <field name="type" />
+                            <field name="desc" />
+                            <field name="qty" />
+                            <field name="estimate_cost" />
+                        </group>
+                        <group>
+                            <field name="modified_desc" />
+                            <field name="modified_qty" />
+                            <field name="modified_estimate_cost" />
+                            <field name="total" />
+                            <field name="request_owner_id" />
+                            <field name="state" string="Approval State" />
+                            <field name="confirmed_demand_product_lines" />
+                            <field name="pending_user_id" />
+                            <field name="purchase_state" string="Purchase State" />
+                        </group>
+                    </group>
+                    <group  string="Detail" >
+                        <field name="detail" placeholder="Detail ..." nolabel="1" colspan="2" />
+                    </group>
+                    <group  string="Modified Detail" >
+                        <field name="modified_detail" placeholder="Modified Detail ..." nolabel="1" colspan="2" />
+                    </group>
+                </sheet>
+                <!-- chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="demand_product_line_form_detail" model="ir.ui.view">
+        <field name="name">demand.product.line.form.detail</field>
+        <field name="model">mhma.demand.product.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="approval_request_id" readonly="1" />
+                            <field name="purchase_order_id" readonly="1" />
+                            <field name="demand_product_id" readonly=" state not in ['new'] " />
+                            <field name="categ_id" />
+                            <field name="uom_id" readonly="1" force_save="1" />
+                            <field name="type" />
+                            <field name="desc" readonly=" state not in ['new'] " />
+                            <field name="qty" readonly=" state not in ['new'] " />
+                            <field name="estimate_cost" readonly=" state not in ['new'] " />
+                        </group>
+                        <group>
+                            <field name="modified_desc" readonly=" pending_user_id != uid " force_save="1" />
+                            <field name="modified_qty" readonly=" pending_user_id != uid " force_save="1" />
+                            <field name="modified_estimate_cost" readonly=" pending_user_id != uid " force_save="1" />
+                            <field name="total" />
+                            <field name="request_owner_id" />
+                            <field name="state" string="Approval State" />
+                            <field name="pending_user_id" />
+                        </group>
+                        
+                    </group>
+                    <group  string="Detail" >
+                        <field name="detail" placeholder="Detail ..." readonly=" state not in ['new'] " nolabel="1" colspan="2"  />
+                    </group>
+                    <group  string="Modified Detail" >
+                        <field name="modified_detail" placeholder="Modified Detail ..." readonly=" pending_user_id != uid "  force_save="1" nolabel="1" colspan="2" />
+                    </group>
+
+                    <!-- <div class="oe_title">
+                        <label for="detail"/>
+                        <field name="detail" placeholder="Detail ..." readonly=" state not in ['new'] "  />
+                    </div>
+                    <div class="oe_title">
+                        <label for="modified_detail"/>
+                        <field name="modified_detail" placeholder="Modified Detail ..." readonly=" pending_user_id != uid "  force_save="1" />
+                    </div> -->
+                </sheet>
+                <!-- chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="demand_product_line_form_detail_in_purchase" model="ir.ui.view">
+        <field name="name">demand.product.line.form.detail.purchase</field>
+        <field name="model">mhma.demand.product.line</field>
+        <field name="arch" type="xml">
+            <form  >
+                <sheet >
+                    <group>
+                        <group>
+                            <field name="approval_request_id" readonly="1" />
+                            <field name="purchase_order_id" readonly="1" />
+                            <field name="demand_product_id" readonly=" confirmed_demand_product_lines == True or purchase_state not in ['draft'] " />
+                            <field name="categ_id" />
+                            <field name="uom_id" readonly="1" force_save="1" />
+                            <field name="type" />
+                            <field name="desc" readonly=" confirmed_demand_product_lines == True or purchase_state not in ['draft'] " />
+                            <field name="qty" readonly=" confirmed_demand_product_lines == True or purchase_state not in ['draft'] " />
+                            <field name="estimate_cost" readonly=" confirmed_demand_product_lines == True or purchase_state not in ['draft'] " />
+                        </group>
+                        <group>
+
+                            <field name="modified_desc" readonly="1" groups="!purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_qty" readonly="1" groups="!purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_estimate_cost" readonly="1" groups="!purchase.group_purchase_manager" force_save="1" />
+                            <field name="total" />
+                            <field name="modified_desc" readonly=" confirmed_demand_product_lines == False or purchase_state not in ['draft'] " groups="purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_qty" readonly=" confirmed_demand_product_lines == False or purchase_state not in ['draft']" groups="purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_estimate_cost" readonly=" confirmed_demand_product_lines == False or purchase_state not in ['draft'] " groups="purchase.group_purchase_manager" force_save="1" />
+
+                            
+                            <field name="request_owner_id" />
+                            <field name="confirmed_demand_product_lines" />
+                            <field name="purchase_state" string="Purchase State" />
+                        </group>
+                        
+                    </group>
+                    <group  string="Detail" >
+                        <field name="detail" placeholder="Detail ..." readonly=" confirmed_demand_product_lines == True or purchase_state not in ['draft'] " nolabel="1" colspan="2"  />
+                    </group>
+                    <group  string="Modified Detail" >
+                        <field name="modified_detail" placeholder="Modified Detail ..." readonly="1" groups="!purchase.group_purchase_manager"  force_save="1" nolabel="1" colspan="2" />
+                        <field name="modified_detail" placeholder="Modified Detail ..." readonly=" confirmed_demand_product_lines == False or purchase_state not in ['draft'] " groups="purchase.group_purchase_manager"  force_save="1" nolabel="1" colspan="2" />
+                    </group>
+
+                    <!-- <div class="oe_title">
+                        <label for="detail"/>
+                        <field name="detail" placeholder="Detail ..." readonly=" state not in ['new'] "  />
+                    </div>
+                    <div class="oe_title">
+                        <label for="modified_detail"/>
+                        <field name="modified_detail" placeholder="Modified Detail ..." readonly=" pending_user_id != uid "  force_save="1" />
+                    </div> -->
+                </sheet>
+                <!-- chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_demand_products_lines" model="ir.actions.act_window">
+        <field name="name">Demand Products Lines</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mhma.demand.product.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

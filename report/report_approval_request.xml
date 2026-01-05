@@ -1,0 +1,242 @@
+<odoo>
+
+    <!-- Custom header and footer -->
+    
+    <template id="report_approval_request">
+
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="mhma_inventory.external_layout_custom">
+                    <div class="page">
+
+                        <style type="text/css">
+                            .table td:last-child {
+                            background-color: transparent !important;
+                            }
+                            p {
+                            margin: 0 !important;
+                            }
+                        </style>
+
+                        <h2>
+                            <t t-esc="doc.name" />
+                        </h2>
+
+                        <t t-if="doc.statement_subject">
+                            <h2>
+                                <t t-esc="doc.statement_subject" />
+                            </h2>
+                        </t>
+                        <div class="row mt16">
+                            <div class="col-6">
+                                <strong>Request Owner:</strong>
+                                <t t-esc="doc.request_owner_id.name" />
+                                <br />
+                                <strong>Category:</strong>
+                                <t t-esc="doc.category_id.name" />
+                                <br />
+                                <strong>Date Confirmed:</strong>
+                                <t t-esc="doc.date_confirmed" />
+                                <br />
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <strong>Department:</strong>
+                                    <t t-esc="doc.depart_id.name" />
+                                </div>
+                                <br />
+                                <strong>Request Status:</strong>
+                                <t
+                                    t-raw="dict(doc.fields_get(allfields=['request_status'])['request_status']['selection'])[doc.request_status]" />
+                                <br />
+                            </div>
+                        </div>
+                        <t t-if="doc.determine_specifications">
+                            <div class="mt16">
+                                <h3>Determine Specifications</h3>
+                                <div class="determine_specifications">
+                                    <t t-raw="doc.determine_specifications" />
+                                </div>
+                            </div>
+                        </t>
+
+                        <t t-if="doc.reason">
+                            <div class="mt16">
+                                <h3>Description</h3>
+                                <div class="description">
+                                    <t t-raw="doc.reason" />
+                                </div>
+                            </div>
+                        </t>
+                        <!-- <t t-if="doc.notes">
+                            <div class="mt16">
+                                <h3>Notes</h3>
+                                <div class="notes">
+                                    <t t-raw="doc.notes" />
+                                </div>
+                            </div>
+                        </t> -->
+
+                        <t t-if="doc.demand_product_line_ids">
+                            <div class="mt16">
+                                <h4>Demand Product Lines</h4>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Description</th>
+                                            <th>UoM</th>
+                                            <th>Quantity</th>
+                                            <th t-if="doc.total_all">Estimated Cost</th>
+                                            <th t-if="doc.total_all">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.demand_product_line_ids" t-as="line">
+                                            <tr>
+                                                <td>
+                                                    <t t-esc="line.demand_product_id.display_name" />
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.modified_desc" />
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.uom_id.name" />
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.modified_qty" />
+                                                </td>
+                                                <td t-if="doc.total_all">
+                                                    <t t-esc="round(line.modified_estimate_cost, 2)" />
+                                                </td>
+                                                <td t-if="doc.total_all">
+                                                    <t t-esc="round(line.total, 2)" />
+                                                </td>
+                                            </tr>
+                                            <t t-if="line.modified_detail">
+                                                <tr style="background-color: #F5F5F5;">
+                                                    <td colspan="6">
+                                                        <t t-raw="line.modified_detail" />
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                        </t>
+                                    </tbody>
+                                </table>
+
+                                <table t-if="doc.total_all" class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong>Total All Number</strong>
+                                            </td>
+                                            <td>
+                                                <t t-esc="round(doc.total_all, 2)" /><span> </span><t t-esc="doc.currency_id.symbol" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>Total All Text</strong>
+                                            </td>
+                                            <td>
+                                                <t t-esc="doc.total_all_txt" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </t>
+
+                        <t t-if="doc.aprvl_type == '10' ">
+                            <h4 class="mt16">Partner Information</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>Name:</strong>
+                                    <t t-esc="doc.partner_name" />
+                                    <br />
+                                    <strong>Address:</strong>
+                                    <t t-esc="doc.partner_address" />
+                                    <br />
+                                    <strong>Email:</strong>
+                                    <t t-esc="doc.partner_email" />
+                                    <br />
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <strong>Phone:</strong>
+                                        <t t-esc="doc.partner_phone" />
+                                    </div>
+                                    <div>
+                                        <strong>Mobile:</strong>
+                                        <t t-esc="doc.partner_mobile" />
+                                    </div>
+                                    <div>
+                                        <strong>Debit Account:</strong>
+                                        <span t-field="doc.partner_debit_account_id" />
+                                    </div>
+                                    <div>
+                                        <strong>Credit Account:</strong>
+                                        <span t-field="doc.partner_credit_account_id" />
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </t>
+
+
+                        <div class="mt16">
+                            <h4>Approvers</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Approver</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Signature</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.approver_ids" t-as="approver">
+                                        <tr>
+                                            <td>
+                                                <t t-esc="approver.user_id.name" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="approver.write_date" />
+                                            </td>
+                                            <td>
+                                                <t
+                                                    t-esc="dict(approver.fields_get(allfields=['status'])['status']['selection'])[approver.status]" />
+                                            </td>
+                                            <td>
+                                                <p class="text-center">....................</p>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="report_approval_request_pdf" model="ir.actions.report">
+        <field name="name">Approval Request Report</field>
+        <field name="model">approval.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">mhma_inventory.report_approval_request</field>
+        <field name="report_file">mhma_inventory.report_approval_request</field>
+        <field name="print_report_name">'Approval Request - %s - %s' % (object.name,
+            object.request_owner_id.name)</field>
+        <field name="binding_model_id" ref="model_approval_request" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="mhma_inventory.portrait_custom_paperformat"/>
+    </record>
+    
+</odoo>

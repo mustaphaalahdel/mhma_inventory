@@ -1,0 +1,46 @@
+<odoo>
+    <data noupdate="0">
+
+        <record id="rule_po_read_own_or_purchaser_for_officer" model="ir.rule">
+            <field name="name">PO: read own or purchaser (Officer)</field>
+            <field name="model_id" ref="purchase.model_purchase_order" />
+            <!-- يرى فقط ما أنشأه أو ما كان هو المشتري فيه -->
+            <field name="domain_force">
+                ['|', ('create_uid', '=', user.id), ('user_id', '=', user.id)]
+            </field>
+
+            <!-- ليست قاعدة عامة -->
+            <field name="global" eval="False" />
+
+            <!-- اربطها بالمجموعة -->
+            <field name="groups" eval="[(4, ref('mhma_inventory.mhma_purchase_officer'))]" />
+
+            <!-- نفعِّل القراءة فقط هنا (لا نغيّر بقية العمليات) -->
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+
+        <!-- Officer: read own lines OR lines of POs where he's purchaser -->
+        <record id="rule_pol_read_own_or_purchaser_for_officer" model="ir.rule">
+            <field name="name">PO Line: read own or purchaser (Officer)</field>
+            <field name="model_id" ref="purchase.model_purchase_order_line" />
+            <field name="domain_force">
+                [
+                    '|', '|',
+                    ('create_uid', '=', user.id), 
+                    ('order_id.user_id', '=', user.id),
+                    ('order_id.create_uid', '=', user.id)
+                ]
+            </field>
+            <field name="global" eval="False" />
+            <field name="groups" eval="[(4, ref('mhma_inventory.mhma_purchase_officer'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+        </record>
+
+    </data>
+</odoo>

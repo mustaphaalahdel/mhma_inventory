@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="my_edit_product_category_form_view" model="ir.ui.view">
+        <field name="name">my.edit.product.category.form</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="symbol"/>
+            </xpath>
+
+            <xpath expr="//group[@name='account_property']" position="after">
+                <notebook>
+                    <page name="products_variants" string="Products Variants">
+                        <group>
+                            <group>
+                                <field name="product_variant_count"/>
+                            </group>
+                        </group>
+                        <field name="product_variant_ids"/>
+                    </page>
+                </notebook>
+            </xpath>
+
+        </field>
+    </record>
+    
+</odoo>

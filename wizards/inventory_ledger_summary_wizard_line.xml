@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_inventory_ledger_summary_line_tree" model="ir.ui.view">
+        <field name="name">Inventory Ledger Summary Line Tree</field>
+        <field name="model">inventory.ledger.summary.wizard.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="wizard_id" optional="1" />
+                <field name="product_id" />
+                <field name="categ_id" optional="1" />
+                <field name="opening_qty" />
+                <field name="opening_cost" optional="1" />
+                <field name="opening_val" />
+                <field name="inbound_qty" />
+                <field name="inbound_cost" optional="1" />
+                <field name="inbound_val" />
+                <field name="outbound_qty" />
+                <field name="outbound_cost" optional="1" />
+                <field name="outbound_val" />
+                <field name="closing_qty" />
+                <field name="closing_cost" optional="1" />
+                <field name="closing_val" />
+                <field name="valuations_count" optional="1" />
+
+                <button 
+                    name="action_view_tool" 
+                    type="object"
+                    icon="fa-bar-chart"
+                    title="Valuation Report" />
+
+                <field name="create_uid" optional="1" />
+                <field name="create_date" optional="1" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- pivot -->
+    <record id="action_inventory_ledger_summary_line_pivot" model="ir.ui.view">
+        <field name="name">Inventory Ledger Summary Line Pivot</field>
+        <field name="model">inventory.ledger.summary.wizard.line</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="categ_id" type="row" />
+                <field name="product_id" type="row" />
+                <field name="opening_qty" type="measure" />
+                <field name="opening_val" type="measure" />
+                <field name="inbound_qty" type="measure" />
+                <field name="inbound_val" type="measure" />
+                <field name="outbound_qty" type="measure" />
+                <field name="outbound_val" type="measure" />
+                <field name="closing_qty" type="measure" />
+                <field name="closing_val" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <!-- form -->
+    <record id="inventory_ledger_summary_line_form" model="ir.ui.view">
+        <field name="name">Inventory Ledger Summary Line Form</field>
+        <field name="model">inventory.ledger.summary.wizard.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="wizard_id" />
+                <field name="product_id" />
+
+                <group>
+                    <group>
+                        <field name="categ_id" optional="1" />
+                        <field name="opening_qty" />
+                        <field name="opening_cost" optional="1" />
+                        <field name="opening_val" />
+                        <field name="inbound_qty" />
+                        <field name="inbound_cost" optional="1" />
+                        <field name="inbound_val" />
+                    </group>
+                    <group>
+                        <field name="outbound_qty" />
+                        <field name="outbound_cost" optional="1" />
+                        <field name="outbound_val" />
+                        <field name="closing_qty" />
+                        <field name="closing_cost" optional="1" />
+                        <field name="closing_val" />
+                        <field name="valuations_count" optional="1" />
+                    </group>
+                </group>
+
+                <notebook>
+                    <page name="valuations" string="Valuations">
+                        <field name="stock_valuation_layer_ids"></field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="inventory_ledger_summary_line_action" model="ir.actions.act_window">
+        <field name="name">Inventory Ledger Summary Lines</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">inventory.ledger.summary.wizard.line</field>
+        <field name="view_mode">tree,pivot</field>
+        <field name="target">current</field>
+    </record>
+
+
+</odoo>

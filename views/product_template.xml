@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2023 Komit - Cuong Nguyen Mtm
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="product_template_my_search_view" model="ir.ui.view">
+        <field name="name">product.template.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="attributes">
+                <!-- Add display_name to filter_domain -->
+                <attribute name="filter_domain">
+                    [
+                    '|', '|', '|', '|', '|',
+                    ('default_code', 'ilike', self),
+                    ('product_variant_ids', 'ilike', self),
+                    ('name', 'ilike', self),
+                    ('barcode', 'ilike', self),
+                    ('display_name', 'ilike', self),
+                    ("product_tag_ids", "ilike", self)
+                    ]
+                </attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="product_my_search_form_view" model="ir.ui.view">
+        <field name="name">product.product.search</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_search_form_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="attributes">
+                <!-- Add display_name to filter_domain -->
+                <attribute name="filter_domain">
+                    [
+                    '|', '|', '|', '|', '|',
+                    ('default_code', 'ilike', self),
+                    ('name', 'ilike', self),
+
+                    ('barcode', 'ilike', self),
+                    ('display_name', 'ilike', self),
+
+                    ("product_tag_ids", "ilike", self),
+                    ("additional_product_tag_ids", "ilike", self)
+                    ]
+                </attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="product_tree_form_view" model="ir.ui.view">
+        <field name="name">product.product.tree</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='name']" position="after">
+                <!-- <field name="symbol_seq" optional="1" /> -->
+                <field name="image_512" optional="1" widget="image"
+                    options="{'preview_image': 'image_512'}" />
+                <field name="display_name" string="Product Variant Name" optional="1"></field>
+                <!-- <field name="full_name" optional="1"></field> -->
+                <field name="cost_time_qty" optional="1" />
+                <field name="inventory_unit" optional="1" />
+            </xpath>
+            <xpath expr="//tree/field[@name='uom_id']" position="after">
+                <field name="create_date" optional="1" />
+                <field name="create_uid" optional="1" />
+                <field name="write_date" optional="1" />
+                <field name="write_uid" optional="1" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_form_form_view" model="ir.ui.view">
+        <field name="name">product.product.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                <group string="Product Variant Description">
+                    <field name="product_variant_descc" nolabel="1" colspan="4" />
+                </group>
+            </xpath>
+
+            <xpath expr="//group[1]" position="before">
+                <group>
+                    <group>
+                        <label for="qty_from_valuation" />
+                        <div class="o_row">
+                            <div class="o_col_2">
+                                <field name="qty_from_valuation" force_save="1" />
+                            </div>
+                            <div class="o_col_1">
+                                <button name="action_valuatin_report"
+                                    type="object"
+                                    icon="fa-bar-chart"
+                                    class="btn btn-primary"
+                                    title="Valuation Report" />
+                            </div>
+                        </div>
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='default_code']" position="before">
+
+                <field name="cost_time_qty" />
+                <field name="inventory_unit" />
+            </xpath>
+
+            <xpath expr="//div[@name='options']" position="inside">
+                <div modifiers="{}">
+                    <field name="is_pack" modifiers="{}" />
+                    <label for="is_pack" modifiers="{}" />
+                </div>
+            </xpath>
+
+
+        </field>
+    </record>
+
+    <record id="product_template_form_my_edit" model="ir.ui.view">
+        <field name="name">product.template.form.my.edit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='categ_id']" position="after">
+                <field name="product_dsbrs_type" />
+            </xpath>
+        </field>
+    </record>
+    <record id="product_template_list_my_edit" model="ir.ui.view">
+        <field name="name">product.template.list.my.edit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='name']" position="after">
+                <field name="image_512" optional="1" widget="image"
+                    options="{'preview_image': 'image_512'}" />
+            </xpath>
+            <xpath expr="//tree/field[@name='list_price']" position="after">
+                <field name="product_dsbrs_type" optional="1" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

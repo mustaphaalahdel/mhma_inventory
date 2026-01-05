@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="stock_move_line_my_tree_view" model="ir.ui.view">
+        <field name="name">stock.move.line.tree</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='location_dest_id']" position="after">
+                <field name="inventory_unit" optional="1" />
+                <field name="picking_partner_id" optional="1" />
+                <!-- <field name="depart_id" optional="1" /> -->
+                <field name="depart_id" optional="1" />
+                <field name="schedule_date_to_picking" string="Schedule Date to Picking" optional="1" />
+                <field name="date_done_to_picking" string="Date Done to Picking" optional="1" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

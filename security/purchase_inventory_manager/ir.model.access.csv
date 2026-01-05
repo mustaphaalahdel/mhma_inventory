@@ -1,0 +1,30 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mhma_mgr_purchase_order,MHMA Mgr Purchase Order,purchase.model_purchase_order,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_account_account,MHMA Mgr Account,purchase.model_purchase_order,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_account_account,MHMA Mgr Account Account,account.model_account_account,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_account_tax,MHMA Mgr Account Tax,account.model_account_tax,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_product_template,MHMA Mgr Product Template,product.model_product_template,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_stock_picking,MHMA Mgr Stock Picking,stock.model_stock_picking,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_res_partner,MHMA Mgr Res Partner,base.model_res_partner,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_stock_move,MHMA Mgr Stock Move,stock.model_stock_move,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_account_journal,MHMA Mgr Account Journal,account.model_account_journal,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_purchase_requisition,MHMA Mgr Purchase Requisition,purchase_requisition.model_purchase_requisition,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_product_product,MHMA Mgr Product Variant,product.model_product_product,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_stock_warehouse,MHMA Mgr Stock Warehouse,stock.model_stock_warehouse,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_purchase_order_line,MHMA Mgr PO Line,purchase.model_purchase_order_line,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_purchase_requisition_line,MHMA Mgr PR Line,purchase_requisition.model_purchase_requisition_line,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_product_packaging,MHMA Mgr Product Packaging,product.model_product_packaging,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_purchase_report,MHMA Mgr Purchase Report,purchase.model_purchase_report,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_product_tag,MHMA Mgr Product Tag,product.model_product_tag,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_account_move_line,MHMA Mgr Account Move Line,account.model_account_move_line,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_uom_category,MHMA Mgr UoM Category,uom.model_uom_category,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_product_category,MHMA Mgr Product Category,product.model_product_category,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_supplierinfo,MHMA Mgr Supplierinfo,product.model_product_supplierinfo,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_orderpoint,MHMA Mgr Reordering Rule,stock.model_stock_warehouse_orderpoint,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_pricelist_item,MHMA Mgr Pricelist Item,product.model_product_pricelist_item,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_stock_location,MHMA Mgr Stock Location,stock.model_stock_location,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_purchase_requisition_type,MHMA Mgr PR Type,purchase_requisition.model_purchase_requisition_type,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_uom_uom,MHMA Mgr UoM,uom.model_uom_uom,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_picking_type,MHMA Mgr Picking Type,stock.model_stock_picking_type,mhma_inventory.mhma_purchase_inventory_manager,1,0,0,0
+access_mhma_mgr_product_attribute,MHMA Mgr Product Attribute,product.model_product_attribute,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0
+access_mhma_mgr_product_attribute_value,MHMA Mgr Product Attribute Value,product.model_product_attribute_value,mhma_inventory.mhma_purchase_inventory_manager,1,1,1,0

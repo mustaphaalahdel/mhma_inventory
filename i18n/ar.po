@@ -1,0 +1,3007 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mhma_inventory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250512\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-22 07:44+0000\n"
+"PO-Revision-Date: 2025-10-22 07:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mhma_inventory
+#: model:ir.actions.report,print_report_name:mhma_inventory.report_approval_request_pdf
+msgid ""
+"'Approval Request - %s - %s' % (object.name,\n"
+"            object.request_owner_id.name)"
+msgstr ""
+"'طلب موافقة - %s - %s' % (object.name,\n"
+"            object.request_owner_id.name)"
+
+#. module: mhma_inventory
+#: model:ir.actions.report,print_report_name:mhma_inventory.action_rfq_mhma_report
+msgid ""
+"'RFQ - %s - %s' % (object.name,\n"
+"            object.supplier_id.name)"
+msgstr ""
+"'طلب عرض سعر - %s - %s' % (object.name,\n"
+"            object.supplier_id.name)"
+
+#. module: mhma_inventory
+#: model:ir.actions.report,print_report_name:mhma_inventory.action_report_picking
+msgid "'picking operation - %s'% (object.partner_id.name) "
+msgstr "'عملية انتقاء - %s'% (object.partner_id.name) "
+
+#. module: mhma_inventory
+#: model:ir.actions.report,print_report_name:mhma_inventory.action_report_stock_delivery
+msgid "'stock delivery - %s'% (object.partner_id.name) "
+msgstr "'تسليم مخزون - %s'% (object.partner_id.name) "
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "(document barcode)"
+msgstr "(باركود المستند)"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "(package barcode)"
+msgstr "(باركود الحزمة)"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "(product barcode)"
+msgstr "(باركود المنتج)"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "(serial barcode)"
+msgstr "(باركود تسلسلي)"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "-120"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "12.43"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "120"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "2023-09-24"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "3.00"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid ""
+"<br/>\n"
+"                                    <strong>Address:</strong>"
+msgstr ""
+"<br/>\n"
+"                                    <strong>العنوان:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid ""
+"<br/>\n"
+"                                    <strong>Email:</strong>"
+msgstr ""
+"<br/>\n"
+"                                    <strong>البريد الاكتروني:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid ""
+"<br/>\n"
+"                                <strong>Category:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>الفئة:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid ""
+"<br/>\n"
+"                                <strong>Date Confirmed:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>تاريخ التأكيد:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid ""
+"<br/>\n"
+"                                <strong>Request Status:</strong>"
+msgstr "<strong>حالة الطلب:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\"/>\n"
+"                                All products could not be reserved. Click on the \"Check Availability\" button to try to reserve products."
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle\"/>\n"
+"                                لم يتم حجز جميع المنتجات. انقر على زر \"التحقق من التوفر\" لمحاولة حجز المنتجات."
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.external_layout_custom
+msgid "<span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<span><strong>Contact: </strong></span>"
+msgstr "<span><strong>جهة الاتصال: </strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<span><strong>Customer Address:</strong></span>"
+msgstr "<span><strong>عنوان العميل:</strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<span><strong>Delivery Address:</strong></span>"
+msgstr "<span><strong>عنوان التسليم:</strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<span><strong>Department: </strong></span>"
+msgstr "<span><strong>القسم:</strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<span><strong>Department:</strong></span>"
+msgstr "<span><strong>القسم: </strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<span><strong>Per Directed: </strong></span>"
+msgstr "<span><strong>حسب التوجيه: </strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<span><strong>Per Request: </strong></span>"
+msgstr "<span><strong>حسب الطلب: </strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<span><strong>Statement Subject: </strong></span>"
+msgstr "<span><strong>موضوع البيان: </strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<span><strong>Vendor Address:</strong></span>"
+msgstr "<span><strong>عنوان المورد:</strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<span><strong>Warehouse Address:</strong></span>"
+msgstr "<span><strong>عنوان المستودع:</strong></span>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr "<strong class=\"mr16\">المجموع الفرعي</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Amount</strong>"
+msgstr "<strong>المبلغ</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Approval Purchase Specifications:</strong>"
+msgstr "<strong>مواصفات موافقة الشراء:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<strong>Cost</strong>"
+msgstr "<strong>التكلفة</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "<strong>Credit Account:</strong>"
+msgstr "<strong>حساب الدائن:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Date Order:</strong>"
+msgstr "<strong>الموعد النهائي للطلب:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Date Planned:</strong>"
+msgstr "<strong>التاريخ المخطط:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "<strong>Debit Account:</strong>"
+msgstr "<strong>حساب المدين:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Delivery address</strong>"
+msgstr "<strong>عنوان التسليم</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "<strong>Department:</strong>"
+msgstr "<strong>القسم:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Description</strong>"
+msgstr "<strong>الوصف</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>From</strong>"
+msgstr "<strong>من</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Lot/Serial Number</strong>"
+msgstr "<strong>رقم الدفعة/التسلسلي</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "<strong>Mobile:</strong>"
+msgstr "<strong>الموبايل:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<strong>N</strong>"
+msgstr "<strong>م</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "<strong>Name:</strong>"
+msgstr "<strong>الاسم:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Order:</strong>"
+msgstr "<strong>الطلب:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "<strong>Phone:</strong>"
+msgstr "<strong>الهاتف:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Product Barcode</strong>"
+msgstr "<strong>باركود المنتج</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Product</strong>"
+msgstr "<strong>المنتج</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Purchase Request Directive:</strong>"
+msgstr "<strong>توجيه طلب شراء:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Qty</strong>"
+msgstr "<strong>الكمية</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>الكمية</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Recipient address</strong>"
+msgstr "<strong>عنوان المستلم</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "<strong>Request Owner:</strong>"
+msgstr "<strong>صاحب الطلب:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Request Reference:</strong>"
+msgstr "<strong>طلب الاحتياج:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Scheduled Date:</strong>"
+msgstr "<strong>التاريخ المجدول:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Status:</strong>"
+msgstr "<strong>الحالة:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Supplier:</strong>"
+msgstr "<strong>المورد:</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>الضرائب</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>To</strong>"
+msgstr "<strong>إلى</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Total All Number</strong>"
+msgstr "<strong>الاجمالي الكلي ارقام</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Total All Text</strong>"
+msgstr "<strong>الاجمالي الكلي نص</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "<strong>Total Cost</strong>"
+msgstr "<strong>التكلفة الإجمالية</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Total</strong>"
+msgstr "<strong>الاجمالي</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>سعر الوحدة</strong>"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "<strong>Warehouse address</strong>"
+msgstr "<strong>عنوان المستودع</strong>"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_category__access_group_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__access_group_ids
+msgid "Access Groups"
+msgstr "مجموعات الوصول"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_needaction
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_needaction
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_needaction
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب إجراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__active
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__active
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__active
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__active
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_exception_decoration
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_exception_decoration
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_exception_decoration
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تزيين استثناء النشاط"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_state
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_state
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_state
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_type_icon
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_type_icon
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_type_icon
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__actual_cost
+msgid "Actual Cost"
+msgstr "التكلفة الفعلية"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Add Customer"
+msgstr "اضافة عميل"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Add Partner"
+msgstr "اضافة شريك"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Add Vendor"
+msgstr "اضافة مورد"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_address
+msgid "Address"
+msgstr "العنوان"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__allow_edit
+msgid "Allow Edit"
+msgstr "السماح بالتعديل"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__approval_id
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.hr_expense_form_my_edit
+msgid "Approval"
+msgstr "الموافقة"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_approval_category
+msgid "Approval Category"
+msgstr "فئة الموافقة "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__approval_direct_purchase_id
+msgid "Approval Direct Purchase"
+msgstr "التوجيه بالشراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__approval_disbursing_directive_id
+msgid "Approval Disbursing Directive"
+msgstr "توجيه صرف الموافقة"
+
+#. module: mhma_inventory
+#: model:ir.ui.menu,name:mhma_inventory.menu_approval_mhma
+msgid "Approval MHMA"
+msgstr "موافقة MHMA"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__approval_purchase_request_id
+msgid "Approval Purchase Request"
+msgstr "طلب موافقة شراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__approval_request_id
+msgid "Approval Reference"
+msgstr "مرجع الموافقة"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_mhma_approval_rejection_reason
+msgid "Approval Rejection Reason"
+msgstr "سبب رفض الموافقة"
+
+#. module: mhma_inventory
+#: model:ir.actions.act_window,name:mhma_inventory.approval_rejection_reason_action
+msgid "Approval Rejection Reason Action"
+msgstr "اجراء سبب رفض الموافقة"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_approval_request
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__approval_request_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_res_partner__approval_request_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_res_users__approval_request_id
+msgid "Approval Request"
+msgstr "طلب موافقة "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__approval_request_need_id
+msgid "Approval Request Need"
+msgstr "مرجع طلب الموافقة"
+
+#. module: mhma_inventory
+#: model:ir.actions.report,name:mhma_inventory.report_approval_request_pdf
+msgid "Approval Request Report"
+msgstr "تقرير طلب الموافقة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_tree
+msgid "Approval State"
+msgstr "حالة الموافقة"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_approval_approver
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Approver"
+msgstr "مُعتَمِد "
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "Approvers"
+msgstr "المعتمدون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_attachment_count
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_attachment_count
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_attachment_count
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__avcost
+msgid "Average Cost"
+msgstr "متوسط التكلفة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__avcost_value_total
+msgid "Average Cost Value"
+msgstr "قيمة متوسط التكلفة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#, python-format
+msgid ""
+"Average cost and previous average cost calculated for all valuations in one "
+"query, please refresh the page"
+msgstr ""
+"تم حساب متوسط التكلفة والمتوسط السابق لجميع التقييمات في استعلام واحد، يرجى "
+"تحديث الصفحة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__qty_balances_computed
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__qty_balances_computed
+msgid "Balances Computed"
+msgstr "تم الاحتساب"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_form_simple
+msgid "Base"
+msgstr "أساسي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__beneficiary_id
+msgid "Beneficiary"
+msgstr "المستفيد"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_rejection_reason_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.inventory_ledger_summary_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Cancel_dev"
+msgstr "الغاء_مطور"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__categ_ids
+msgid "Categories"
+msgstr "الفئات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__category_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__categ_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__category_id
+msgid "Category"
+msgstr "الفئة "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__category_name
+msgid "Category Name"
+msgstr "اسم الفئة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Change Request Owner"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__closing_cost
+msgid "Closing Cost"
+msgstr "التكلفة النهائية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__closing_qty
+msgid "Closing Qty"
+msgstr "الكمية النهائية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__closing_qty
+msgid "Closing Quantity"
+msgstr "الكمية النهائية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__closing_val
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__closing_val
+msgid "Closing Value"
+msgstr "القيمة النهائية"
+
+#. module: mhma_inventory
+#: model:ir.ui.menu,name:mhma_inventory.combo_product
+msgid "Combo Product"
+msgstr "منتج كومبو"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__mhma_demand_product__type__1
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__product_template__product_dsbrs_type__1
+msgid "Commodity product"
+msgstr "منتج سلعي"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+msgid "Compute Balances"
+msgstr "حساب الارصدة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__confirm_receipt
+msgid "Confirm Receipt"
+msgstr "تاكيد الاستلام"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__confirmed_demand_product_lines
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__confirmed_demand_product_lines
+msgid "Confirmed Demand Product Lines"
+msgstr "تاكيد بنود منتجات الطلب"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_res_partner
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.control_in_approvers_group
+msgid "Control in approvers"
+msgstr "التحكم في المعتمدين"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__cost
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__standard_pricee
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__cost_time_qty
+msgid "Cost Time Qty"
+msgstr "الكمية في التكلفة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_picking.py:0
+#, python-format
+msgid "Create a Bill"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__create_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__create_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__create_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__create_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__create_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__create_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__create_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__create_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__create_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__create_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_credit_account_id
+msgid "Credit Account"
+msgstr "حساب الدائن"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_my_edit
+msgid "Currency_dev"
+msgstr "العملة_تطوير"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__qty_availablee
+msgid ""
+"Current quantity of products.\n"
+"In a context with a single Stock Location, this includes goods stored at this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"stored in the Stock Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+"الكمية الحالية للمنتجات.\n"
+"في سياق موقع مخزون واحد، يشمل ذلك البضائع المخزنة في هذا الموقع أو أي مواقع تابعة له.\n"
+"في سياق مستودع واحد، يشمل ذلك البضائع المخزنة في موقع المخزون التابع لهذا المستودع أو أي مواقع تابعة له.\n"
+"المخزنة في موقع المخزون التابع لمستودع هذا المتجر، أو أي مواقع تابعة له.\n"
+"وإلا، يشمل ذلك البضائع المخزنة في أي موقع مخزون من النوع 'داخلي'."
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__res_partner__partner_type__customer
+msgid "Customer"
+msgstr "عميل"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__res_partner__partner_type__both
+msgid "Customer & Vendor"
+msgstr "عميل ومورد"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Customizable Desk"
+msgstr "مكتب قابل للتخصيص"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_line_my_tree_view
+msgid "Date Done to Picking"
+msgstr "تاريخ الإنجاز للانتقاء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move_line__date_done_to_picking
+#: model:ir.model.fields,help:mhma_inventory.field_stock_picking__date_done
+msgid "Date at which the transfer has been processed or cancelled."
+msgstr "التاريخ الذي تمت فيه معالجة النقل أو إلغاؤه."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move_line__date_done_to_picking
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__date_done
+msgid "Date of Transfer"
+msgstr "تاريخ النقل"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_debit_account_id
+msgid "Debit Account"
+msgstr "حساب المدين"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_mhma_demand_product
+msgid "Demand Product"
+msgstr "منتج الطلب"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_form_view
+msgid "Demand Product ..."
+msgstr "منتج الطلب ..."
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_mhma_demand_product_line
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__demand_product_line_ids
+msgid "Demand Product Line"
+msgstr "بند منتج الطلب"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "Demand Product Lines"
+msgstr "بنود منتجات الطلب"
+
+#. module: mhma_inventory
+#: model:ir.actions.act_window,name:mhma_inventory.action_demand_products
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__demand_product_line_ids
+#: model:ir.ui.menu,name:mhma_inventory.demand_products
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Demand Products"
+msgstr "منتجات الطلب"
+
+#. module: mhma_inventory
+#: model:ir.actions.act_window,name:mhma_inventory.action_demand_products_lines
+#: model:ir.ui.menu,name:mhma_inventory.demand_products_lines
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_my_edit
+msgid "Demand Products Lines"
+msgstr "بنود منتجات الطلب"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/demand_product_line.py:0
+#, python-format
+msgid "Demand product line can only be deleted if the not confirmed.'."
+msgstr "بند منتج الطلب يمكن حذفها فقط عندما لم يتم تاكيده.'."
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/demand_product_line.py:0
+#, python-format
+msgid "Demand product line can only be deleted if the status is 'New'."
+msgstr "بند منتج الطلب يمكن حذفها فقط عندما يكون الحالة 'جديد'."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__depart_id
+msgid "Depart"
+msgstr "القسم"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__depart_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__depart_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move_line__depart_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__depart_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__desc
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__desc
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Description on transfer"
+msgstr "الوصف على النقل"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Destination Location"
+msgstr "الى"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__detail
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__detail
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail_in_purchase
+msgid "Detail"
+msgstr "التفاصيل"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_form_view
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail_in_purchase
+msgid "Detail ..."
+msgstr "التفاصيل ..."
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_form_view
+msgid "Detail AS Template"
+msgstr "التفاصيل كقالب"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__determine_specifications
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#, python-format
+msgid "Determine Specifications"
+msgstr "تحديد المواصفات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__2
+msgid "Determine items specifications"
+msgstr "تحديد مواصفات الاصناف"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__req_purchase_ids
+msgid "Determine specifications"
+msgstr "تحديد المواصفات"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Determine specifications category is not exists"
+msgstr "فئة تحديد المواصفات غير موجودة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Determine specifications category not configured."
+msgstr "فئة تحديد المواصفات غير مهيئة."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_product_template_attribute_line__sequence
+msgid "Determine the display order"
+msgstr "تحديد ترتيب العرض"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Direct Purchase"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__approval_request_need_ids
+msgid "Direct Purchases(Expenses)"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__approval_direct_purchase_ids
+msgid "Direct Purchases(Expenses) per Directive"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Direction Approvers"
+msgstr "معتمدون التوجيه"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__dsbrs_ids
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_list_my_edit
+msgid "Directions"
+msgstr "التوجيهات"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Disburse Commend"
+msgstr "أمر صرف"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__0
+msgid "Disbursement"
+msgstr "طلب صرف او احتياج"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__4
+#: model:res.groups,name:mhma_inventory.disbursing_directive_group
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Disbursing Directive"
+msgstr "توجيه بالصرف"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Disbursing directive category is not exists"
+msgstr "فئة توجيه الصرف غير موجودة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Disbursing directive category not configured."
+msgstr "فئة توجيه الصرف غير مهيئة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__display_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__display_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__display_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__display_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__display_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__display_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__display_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#, python-format
+msgid "Done"
+msgstr "تم بنجاح"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Draft_dev"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__dsbrs_id
+msgid "Dsbrs"
+msgstr "حسب طلب الاحتياج"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_email
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__res_partner__partner_type__employee
+msgid "Employee"
+msgstr "موظف"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__employee2_id
+msgid "Employee2"
+msgstr "موظف2"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__employee2_user_id
+msgid "Employee2 User"
+msgstr "مستخدم الموظف2"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Enter Statement Subject ..."
+msgstr "أدخل موضوع البيان ..."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__estimate_cost
+msgid "Estimate Cost"
+msgstr "التكلفة التقديرية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__estimated_cost
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "Estimated Cost"
+msgstr "التكلفة التقديرية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_approver__existing_request_user_ids
+msgid "Existing Request User"
+msgstr "مستخدِم طلب موجود بالفعل "
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_hr_expense
+msgid "Expense"
+msgstr "النفقة "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__final_balance
+msgid "Final Balance"
+msgstr "الرصيد النهائي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__final_balance_val
+msgid "Final Balance Val"
+msgstr "قيمة الرصيد النهائي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__mhma_demand_product__type__2
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__product_template__product_dsbrs_type__2
+msgid "Fixed Asset"
+msgstr "أصل ثابت"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_follower_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_follower_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_follower_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_partner_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_partner_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_partner_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__activity_type_icon
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__activity_type_icon
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__activity_type_icon
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_picking_form_my_edit
+msgid "Forecast Report"
+msgstr "تقرير التنبؤ"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__virtual_availablee
+msgid ""
+"Forecast quantity (computed as Quantity On Hand - Outgoing + Incoming)\n"
+"In a context with a single Stock Location, this includes goods stored in this location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+"الكمية المتوقعة (محسوبة كالكمية المتاحة - الصادرة + الواردة)\n"
+"في سياق موقع مخزون واحد، يشمل ذلك البضائع المخزنة في هذا الموقع أو أي مواقع تابعة له.\n"
+"في سياق مستودع واحد، يشمل ذلك البضائع المخزنة في موقع المخزون التابع لهذا المستودع أو أي مواقع تابعة له.\n"
+"وإلا، يشمل ذلك البضائع المخزنة في أي موقع مخزون من النوع 'داخلي'."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__virtual_availablee
+msgid "Forecasted Quantity"
+msgstr "الكمية المتوقعة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "From"
+msgstr "من"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__mhma_account_move_id
+msgid "MHMA Account Move"
+msgstr "حركة حساب MHMA"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__mhma_create_date
+msgid "MHMA Created At"
+msgstr "وقت الإنشاء في MHMA"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "Get Quantity"
+msgstr "الحصول على الكمية"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.inventory_ledger_summary_form
+msgid "Get Summary"
+msgstr "الحصول على الملخص"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__has_message
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__has_message
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__has_message
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__is_req_revieve
+msgid "Has the stock disbursement been received?"
+msgstr "هل تم استلام صرف المخزون؟"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__sequence
+msgid "HiddenSequence"
+msgstr "تسلسل "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__id
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__id
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__id
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_exception_icon
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_exception_icon
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_exception_icon
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__activity_exception_icon
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__activity_exception_icon
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__activity_exception_icon
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__message_needaction
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__message_needaction
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__message_needaction
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، تتطلب الرسائل الجديدة انتباهك."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__message_has_error
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__message_has_sms_error
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__message_has_error
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__message_has_sms_error
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__message_has_error
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__message_has_sms_error
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__message_has_error
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، بعض الرسائل بها خطأ في التسليم."
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.inventory_ledger_summary_form
+msgid ""
+"If you do not specify categories or products, it will give a summary of all "
+"products."
+msgstr "إذا لم تحدد فئات أو منتجات، فسوف يعطيك ملخصًا لجميع المنتجات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__image
+msgid "Image"
+msgstr "الصورة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__inbound_cost
+msgid "Inbound Cost"
+msgstr "تكلفة الوارد"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__inbound_qty
+msgid "Inbound Qty"
+msgstr "كمية الوارد"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__inbound_qty
+msgid "Inbound Quantity"
+msgstr "كمية الوارد"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__inbound_val
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__inbound_val
+msgid "Inbound Value"
+msgstr "قيمة الوارد"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Incoming"
+msgstr "الوارد"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__incoming_qty
+msgid "Incoming Qty"
+msgstr "كمية الوارد"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__incoming_val
+msgid "Incoming Val"
+msgstr "قيمة الوارد"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_product_product__is_pack
+#: model:ir.model.fields,help:mhma_inventory.field_product_template__is_pack
+msgid "Indicates whether theproduct is a pack or not."
+msgstr "يشير إلى ما إذا كان المنتج حزمة أم لا."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__introductory_qty
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Introductory Qty"
+msgstr "الكمية الافتتاحية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__introductory_val
+msgid "Introductory Val"
+msgstr "القيمة الافتتاحية"
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.inventory_dev_group
+msgid "Inventory Developer"
+msgstr "مطور المخزون"
+
+#. module: mhma_inventory
+#: model:ir.ui.menu,name:mhma_inventory.menu_inventory_mhma
+msgid "Inventory MHMA"
+msgstr "مخزون MHMA"
+
+#. module: mhma_inventory
+#: model:ir.actions.act_window,name:mhma_inventory.inventory_ledger_summary_action
+msgid "Inventory Ledger Summary"
+msgstr "ملخص استاذ المخزون"
+
+#. module: mhma_inventory
+#: model:ir.actions.act_window,name:mhma_inventory.inventory_ledger_summary_line_action
+msgid "Inventory Ledger Summary Lines"
+msgstr "بنود ملخص دفتر المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_inventory_ledger_summary_wizard
+msgid "Inventory Ledger Summary Wizard"
+msgstr "ملخص استاذ المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_inventory_ledger_summary_wizard_line
+msgid "Inventory Ledger Summary Wizard Line"
+msgstr "بنود ملخص استاذ المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__inventory_unit
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__inventory_unit
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__inventory_unit
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move_line__inventory_unit
+msgid "Inventory Unit"
+msgstr "وحدة المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_is_follower
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_is_follower
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_is_follower
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__is_send_to_recipient
+msgid "Is Send To Recipient"
+msgstr "تم الإرسال إلى المستلم"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__is_pack
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template__is_pack
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_search_view
+msgid "Is a Pack"
+msgstr "هو حزمة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__account_move_state
+msgid "Journal Entry Status"
+msgstr "حالة قيد اليومية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__keywords
+msgid "Keywords"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_form_view
+msgid "Keywords ..."
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__write_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__write_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__write_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__write_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__write_uid
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__write_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__write_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__write_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__write_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__write_date
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__len_stock_picking_ids
+msgid "Len Stock Picking"
+msgstr "عدد عمليات انتقاء المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__len_stock_picking_dd_ids
+msgid "Len Stock Picking Dd"
+msgstr "عدد عمليات انتقاء المخزون DD"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__line_discount
+msgid "Line Discount"
+msgstr "خصم البند"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__line_ids
+msgid "Lines"
+msgstr "البنود"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Location"
+msgstr "الموقع"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.view_stock_picking
+msgid "Location Dest Div"
+msgstr "موقع الوجهة مطور"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.external_layout_custom
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__lot_or_serial_number
+msgid "Lot/Serial Number"
+msgstr "رقم الدفعة/التسلسلي"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__6
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Maintenance Directive"
+msgstr "توجيه بالصيانة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Maintenance directive category is not exists"
+msgstr "فئة توجيه الصيانة غير موجودة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Maintenance directive category not configured."
+msgstr "فئة توجيه الصيانة غير مهيئة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_category__manager_manager_approval
+msgid "Manager Manager Approval"
+msgstr "موافقة مدير المدير"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_category__manager_manager_manager_approval
+msgid "Manager Manager Manager Approval"
+msgstr "موافقة مدير مدير المدير"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__max_line_sequence
+msgid "Max sequence in lines"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_has_error
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_has_error
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_has_error
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_mobile
+msgid "Mobile"
+msgstr "الموبايل"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__modified_desc
+msgid "Modified Description"
+msgstr "الوصف المعدل"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__modified_detail
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail_in_purchase
+msgid "Modified Detail"
+msgstr "التفاصيل المعدلة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail_in_purchase
+msgid "Modified Detail ..."
+msgstr "التفاصيل المعدلة ..."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__modified_estimate_cost
+msgid "Modified Estimate Cost"
+msgstr "التكلفة التقديرية المعدلة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__modified_qty
+msgid "Modified Quantity"
+msgstr "الكمية المعدلة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_form
+msgid "Move Lines"
+msgstr "بنود الحركة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__partner_move_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__partner_move_id
+msgid "Move Partner"
+msgstr "جهة الاتصال"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__my_activity_date_deadline
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__my_activity_date_deadline
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__my_activity_date_deadline
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "موعد نهائي لنشاطي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_name
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__name
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__res_partner__partner_type__never
+msgid "Never"
+msgstr "لا شيء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_date_deadline
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_date_deadline
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_date_deadline
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_summary
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_summary
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_summary
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_type_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_type_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_type_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_needaction_counter
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_needaction_counter
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_needaction_counter
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الاجراءات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__len_partner_ids
+msgid "Number of Partners"
+msgstr "عدد الشركاء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_has_error_counter
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_has_error_counter
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_has_error_counter
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__message_needaction_counter
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__message_needaction_counter
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__message_needaction_counter
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__message_has_error_counter
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__message_has_error_counter
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__message_has_error_counter
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي تحتوي على خطأ في التسليم"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Open Form"
+msgstr "فتح النموذج"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__opening_cost
+msgid "Opening Cost"
+msgstr "التكلفة الافتتاحية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__opening_qty
+msgid "Opening Qty"
+msgstr "الكمية الافتتاحية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__opening_qty
+msgid "Opening Quantity"
+msgstr "الكمية الافتتاحية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__opening_val
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__opening_val
+msgid "Opening Value"
+msgstr "القيمة الافتتاحية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__partner_id
+msgid ""
+"Optional address where goods are to be delivered, specifically used for "
+"allotment"
+msgstr "عنوان اختياري لتسليم البضائع، يُستخدم بشكل خاص للتخصيص"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Other Information"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__outbound_cost
+msgid "Outbound Cost"
+msgstr "تكلفة الصادر"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__outbound_qty
+msgid "Outbound Qty"
+msgstr "كمية الصادر"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__outbound_qty
+msgid "Outbound Quantity"
+msgstr "كمية الصادر"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__outbound_val
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__outbound_val
+msgid "Outbound Value"
+msgstr "قيمة الصادر"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Outgoing"
+msgstr "الصادر"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__outgoing_qty
+msgid "Outgoing Qty"
+msgstr "كمية الصادر"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__outgoing_val
+msgid "Outgoing Val"
+msgstr "قيمة الصادر"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__pack_location_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template__pack_location_id
+msgid "Pack Location"
+msgstr "موقع الحزمة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__pack_price
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template__pack_price
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "Pack Price"
+msgstr "سعر الحزمة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__pack_products_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template__pack_products_ids
+msgid "Pack Products"
+msgstr "منتجات الحزمة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__pack_quantity
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template__pack_quantity
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "Pack Quantity"
+msgstr "كمية الحزمة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/combo_products.py:0
+#, python-format
+msgid "Pack products invoicing policy should be in delivered quantities"
+msgstr "يجب أن تكون سياسة فوترة منتجات الحزمة بالكميات المسلمة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Package"
+msgstr "طرد"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Package A"
+msgstr "طرد أ"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__partner_id
+msgid "Partner"
+msgstr "جهة الاتصال"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+msgid "Partner Information"
+msgstr "معلومات الشريك"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_res_partner__partner_type
+#: model:ir.model.fields,field_description:mhma_inventory.field_res_users__partner_type
+msgid "Partner Type"
+msgstr "نوع الشريك"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__partner_user_id
+msgid "Partner User"
+msgstr "المستخدم"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_ids
+msgid "Partners"
+msgstr "الشركاء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__pending_user_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__pending_user_id
+msgid "Pending User"
+msgstr "المعتمد قيد الانتظار"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.inventory_ledger_summary_form
+msgid "Period"
+msgstr "الفترة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__product_template__product_dsbrs_type__3
+msgid "Personal Custody"
+msgstr "العهدة الشخصية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__partner_phone
+msgid "Phone"
+msgstr "الهاتف"
+
+#. module: mhma_inventory
+#: model:ir.actions.report,name:mhma_inventory.action_report_picking
+msgid "Picking Operation Report MHMA"
+msgstr "تقرير عملية الانتقاء MHMA"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Please add demand product lines"
+msgstr "يرجى اضافة بنود منتجات الطلب"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Presence depends on the type of operation."
+msgstr "التوفر يعتمد على نوع العملية."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__prev_avcost
+msgid "Previous Average Cost"
+msgstr "متوسط التكلفة السابقة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__price
+msgid "Price"
+msgstr "السعر"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.view_stock_picking
+msgid "Print Pick"
+msgstr "طباعة الانتقاء"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_product_template
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__demand_product_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__product_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__product_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Product"
+msgstr "المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_product_attribute
+msgid "Product Attribute"
+msgstr "خاصية المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_product_category
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__categ_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__categ_id
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__type
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__product_dsbrs_type
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template__product_dsbrs_type
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__product_dsbrs_type
+msgid "Product Disbursement Type"
+msgstr "نوع صرف المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "تحركات المنتج (بنود حركة المخزون)"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__product_name
+msgid "Product Name"
+msgstr "اسم المنتج"
+
+#. module: mhma_inventory
+#: model:ir.actions.act_window,name:mhma_inventory.product_pack_action
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "Product Pack"
+msgstr "حزمة المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_product_template_attribute_line
+msgid "Product Template Attribute Line"
+msgstr "بند خاصية قالب المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_product_template_attribute_value
+msgid "Product Template Attribute Value"
+msgstr "قيمة خاصية قالب المنتج "
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_product_product
+msgid "Product Variant"
+msgstr "متغير المنتج "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_category__product_variant_count
+msgid "Product Variant Count"
+msgstr "عدد متغيرات المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__product_variant_descc
+msgid "Product Variant Desc"
+msgstr "وصف متغير المنتج"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_form_form_view
+msgid "Product Variant Description"
+msgstr "وصف متغير المنتج"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_tree_form_view
+msgid "Product Variant Name"
+msgstr "اسم متغير المنتج"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard__product_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_category__product_variant_ids
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.my_edit_product_category_form_view
+msgid "Products Variants"
+msgstr "متغيرات المنتجات"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "Purchase"
+msgstr "شراء"
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.purchase_dev_group
+msgid "Purchase Developer"
+msgstr "مطور المشتريات"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_purchase_order
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__purchase_order_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__purchase_order_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__purchase_order_id
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__purchase_order_dis_ids
+msgid "Purchase Order Dis"
+msgstr "أوامر الشراء حسب المواصفات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__purchase_order_pr_ids
+msgid "Purchase Order Pr"
+msgstr "أوامر الشراء حسب توجيه او طلب الشراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__purchase_state
+msgid "Purchase Order State"
+msgstr "حالة أمر الشراء"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_list_my_edit
+msgid "Purchase Orders"
+msgstr "أوامر الشراء"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Purchase RFQ"
+msgstr "طلب عرض سعر شراء"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Purchase Request"
+msgstr "طلب شراء"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Purchase Request category is not exists"
+msgstr "فئة طلب شراء غير موجودة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Purchase Request category not configured."
+msgstr "فئة طلب شراء غير مهيئة."
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_tree_my_edit
+msgid "Purchase Request or Purchasing Directive"
+msgstr "طلب شراء أو توجيه بالشراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__approval_purchase_specifications_id
+msgid "Purchase Specifications"
+msgstr "مواصفات الشراء"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_form_detail_in_purchase
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.demand_product_line_tree
+msgid "Purchase State"
+msgstr "حالة الشراء"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Purchase directive category is not exists"
+msgstr "فئة توجيه الشراء غير موجودة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Purchase directive category not configured."
+msgstr "فئة التوجيه بالشراء غير مهيئة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__3
+#: model:res.groups,name:mhma_inventory.purchasing_directive_group
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Purchasing Directive"
+msgstr "توجيه بالشراء"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "QR Code"
+msgstr "كود QR"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__qty
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__qty_in_source_location
+msgid "Qty In Source Location"
+msgstr "الكمية في الموقع المصدر"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__qty_move
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Qty Move"
+msgstr "كمية الحركة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__qty_stock_move
+msgid "Qty Stock Move"
+msgstr "الكمية في التقييم"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__quantity
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__qty_available
+msgid "Quantity Available"
+msgstr "الكمية المتاحة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__qty_from_valuation
+msgid "Quantity From Valuation"
+msgstr "الكمية من التقييم"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__qty_mhma
+msgid "Quantity MHMA"
+msgstr "الكمية MHMA"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__qty_availablee
+msgid "Quantity On Hand"
+msgstr "الكمية في اليد"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Quantity must be greater than zero"
+msgstr "الكمية يجب ان تكون اكبر من الصفر"
+
+#. module: mhma_inventory
+#: model:ir.actions.report,name:mhma_inventory.action_rfq_mhma_report
+msgid "RFQ MHMA Report"
+msgstr "تقرير طلب عرض سعر MHMA"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__rating_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__rating_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__rating_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_picking.py:0
+#, python-format
+msgid "Receipt must be confirmed before approval."
+msgstr "يجب على المستلم التأكد من استلام الطلب قبل الموافقة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.hr_expense_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_picking_form_my_edit
+msgid "Received Done"
+msgstr "تم الاستلام"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_picking_form_my_edit
+msgid "Receiving information"
+msgstr "معلومات الاستلام"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__recipient_id
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_picking_form_my_edit
+msgid "Recipient"
+msgstr "المستلم"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+msgid "Recompute AVCOST"
+msgstr "احتساب متوسط التكلفة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__product_ref
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_rejection_reason_form
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Reject"
+msgstr "رفض"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__rejection_reason
+msgid "Rejection Reason"
+msgstr "سبب الرفض"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_hr_expense__employee2_user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "اسم المستخدم المرتبط بالمصدر لإدارة الوصول إليه."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__reminder_recipient
+msgid "Reminder Recipient"
+msgstr "تذكير المستلم"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.hr_expense_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_picking_form_my_edit
+msgid "Reminder recipient"
+msgstr "تذكير المستلم"
+
+#. module: mhma_inventory
+#: model:ir.ui.menu,name:mhma_inventory.menu_inventory_mhma_report
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.external_layout_custom
+msgid "Republic of Yemen"
+msgstr "الجمهورية اليمنية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__10
+msgid "Request Add Partner"
+msgstr "طلب اضافة شريك"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Request Approvers"
+msgstr "معتمدين الطلب"
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.request_items_needed_group
+msgid "Request Items needed"
+msgstr "طلب احتياج أصناف"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+msgid "Request Needed"
+msgstr "طلب احتياج"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_approval_rejection_reason__request_owner_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__request_owner_id
+msgid "Request Owner"
+msgstr "صاحب الطلب"
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.request_owner_control_group
+msgid "Request Owner Control"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.request_procurement_group
+msgid "Request Procurement"
+msgstr "طلب شراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__req_purchase_id
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__1
+msgid "Request Purchase"
+msgstr "طلب شراء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__request_ref_id
+msgid "Request Ref"
+msgstr "مرجع الطلب"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_my_edit
+msgid "Request Reference"
+msgstr "مرجع الطلب"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+msgid "Reset Balances"
+msgstr "الغاء احتساب الارصدة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__activity_user_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__activity_user_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__activity_user_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "S0001"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__message_has_sms_error
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__message_has_sms_error
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__message_has_sms_error
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_line_my_tree_view
+msgid "Schedule Date to Picking"
+msgstr "تاريخ الجدولة للانتقاء"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move_line__schedule_date_to_picking
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__scheduled_date
+msgid "Scheduled Date"
+msgstr "التاريخ المجدول"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move_line__schedule_date_to_picking
+#: model:ir.model.fields,help:mhma_inventory.field_stock_picking__scheduled_date
+msgid ""
+"Scheduled time for the first part of the shipment to be processed. Setting "
+"manually a value here would set it as expected date for all the stock moves."
+msgstr ""
+"الوقت المجدول لمعالجة الجزء الأول من الشحنة. تعيين قيمة يدويًا هنا سيحددها "
+"كتاريخ متوقع لجميع حركات المخزون."
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_pack_products
+msgid "Select Pack Products"
+msgstr "اختيار منتجات الحزمة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__sequence
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__sequence
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_template_attribute_line__sequence
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__sequence2
+msgid "Sequence"
+msgstr "تسلسل "
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__mhma_demand_product__type__3
+msgid "Service"
+msgstr "خدمة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__approval_category__aprvl_type__5
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#, python-format
+msgid "Service Directive"
+msgstr "توجيه بالخدمة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Service directive category is not exists"
+msgstr "فئة توجيه الخدمة غير موجودة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid "Service directive category not configured."
+msgstr "فئة التوجيه بالخدمة غير مهيئة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Shelf 1"
+msgstr "الرف 1"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__sequence2
+msgid "Shows the sequence in the Stock Move."
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.specify_specification_items_group
+msgid "Specify Specification Items"
+msgstr "تحديد مواصفات الأصناف"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__statement_subject
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__statement_subject
+msgid "Statement Subject"
+msgstr "موضوع البيان"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "Status"
+msgstr "الحالة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__activity_state
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__activity_state
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__activity_state
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق قد مضى\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: أنشطة مستقبلية."
+
+#. module: mhma_inventory
+#: model:ir.actions.report,name:mhma_inventory.action_report_stock_delivery
+msgid "Stock Delivery Report MHMA"
+msgstr "تقرير تسليم المخزون MHMA"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_stock_move
+msgid "Stock Move"
+msgstr "حركة المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__stock_move_line_cost
+msgid "Stock Move Line Cost"
+msgstr "تكلفة بند حركة المخزون"
+
+#. module: mhma_inventory
+#: model:ir.actions.act_window,name:mhma_inventory.action_stock_move_valuation
+#: model:ir.ui.menu,name:mhma_inventory.menu_stock_move_valuation
+msgid "Stock Move Valuation"
+msgstr "تقييم حركة المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__stock_picking_ids
+msgid "Stock Pickings"
+msgstr "عمليات انتقاء المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__stock_picking_dd_ids
+msgid "Stock Pickings DD"
+msgstr "عمليات انتقاء المخزون حسب التوجيه"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#: model:ir.model,name:mhma_inventory.model_stock_valuation_layer
+#, python-format
+msgid "Stock Valuation Layer"
+msgstr "طبقة تقييم المخزون "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__stock_valuation_layer_ids
+msgid "Stock Valuation Layers"
+msgstr "طبقات تقييم المخزون"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_pivot
+msgid "Stock Valuation Report"
+msgstr "تقرير تقييم المخزون"
+
+#. module: mhma_inventory
+#: model:res.groups,name:mhma_inventory.stock_keeper_group
+msgid "Stock keeper"
+msgstr "أمين المخازن"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+msgid "Summary"
+msgstr "الملخص"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_hr_expense__supplier_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__supplier_id
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_my_edit
+msgid "Supplier_dev"
+msgstr "المورد_تطوير"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_category__symbol
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_category__symbol
+msgid "Symbol"
+msgstr "الرمز"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_category.py:0
+#, python-format
+msgid "Symbol must be unique"
+msgstr "يجب أن يكون الرمز فريدًا"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__qty_available
+msgid "The available quantity of the product."
+msgstr "الكمية المتاحة من المنتج."
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#, python-format
+msgid ""
+"The balance computation status has been reset for all records. Please "
+"refresh the page."
+msgstr "تم إعادة تعيين حالة احتساب الأرصدة لكل البنود، قم بعمل تحديث للصفحة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#, python-format
+msgid ""
+"The balances of the new records have been updated. Please refresh the page."
+msgstr "تم تحديث أرصدة البنود الجديدة قم بعمل تحديث للصفحة."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_product_product__pack_price
+#: model:ir.model.fields,help:mhma_inventory.field_product_template__pack_price
+msgid "The calculated price of the pack."
+msgstr "السعر المحسوب للحزمة."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__price
+msgid "The calculated price of the product."
+msgstr "السعر المحسوب للمنتج."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__cost
+msgid "The cost of the product."
+msgstr "تكلفة المنتج."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_product_product__pack_location_id
+#: model:ir.model.fields,help:mhma_inventory.field_product_template__pack_location_id
+msgid "The default location for the pack."
+msgstr "الموقع الافتراضي للحزمة."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_product_product__pack_products_ids
+#: model:ir.model.fields,help:mhma_inventory.field_product_template__pack_products_ids
+msgid "The list of products included in the pack."
+msgstr "قائمة المنتجات المشمولة في الحزمة."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__lot_or_serial_number
+msgid "The lot/serial number of the product."
+msgstr "رقم الدفعة/الرقم التسلسلي للمنتج."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__note
+msgid "The note of the product."
+msgstr "ملاحظة المنتج."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_product_product__pack_quantity
+#: model:ir.model.fields,help:mhma_inventory.field_product_template__pack_quantity
+msgid "The quantity of the product in the pack."
+msgstr "كمية المنتج في الحزمة."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__quantity
+msgid "The quantity of the product."
+msgstr "كمية المنتج."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__product_id
+msgid "The specific product being referenced."
+msgstr "المنتج المحدد المشار إليه."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__product_tmpl_id
+msgid "The template of the product."
+msgstr "قالب المنتج."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_pack_products__total_available_quantity
+msgid "The total available quantity of the selected product."
+msgstr "إجمالي الكمية المتاحة للمنتج المحدد."
+
+#. module: mhma_inventory
+#: model_terms:ir.actions.act_window,help:mhma_inventory.product_pack_action
+msgid "There is no product pack to show...!"
+msgstr "لا توجد حزمة منتجات لعرضها...!"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "To"
+msgstr "إلى"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid ""
+"To get the quantity of Pack with                                         "
+"respect to the quantity of pack products"
+msgstr "للحصول على كمية الحزمة بالنسبة إلى كمية منتجات الحزمة"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__total
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__total_cost
+msgid "Total Cost"
+msgstr "التكلفة الإجمالية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__total_all
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__rfq_total_all
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__total_cost_all
+msgid "Total Cost All"
+msgstr "إجمالي التكلفة الكلي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__total_all_txt
+#: model:ir.model.fields,field_description:mhma_inventory.field_purchase_order__rfq_total_all_txt
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_picking__total_cost_all_txt
+msgid "Total Cost All Text"
+msgstr "نص إجمالي التكلفة الكلي"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Total Inbound Quantity"
+msgstr "إجمالي الكمية الواردة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Total Inbound Value"
+msgstr "إجمالي القيمة الواردة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Total Outbound Quantity"
+msgstr "إجمالي الكمية الصادرة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_custom
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Total Outbound Value"
+msgstr "إجمالي القيمة الصادرة"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "Total Price"
+msgstr "السعر الإجمالي"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_pack_products__total_available_quantity
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Total Quantity"
+msgstr "الكمية الإجمالية"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__total_stock_move
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_picking_form_my_edit
+msgid "Total Stock Move"
+msgstr "إجمالي حركة المخزون"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_valuation_layer_tree_simple
+msgid "Total Value"
+msgstr "القيمة الإجمالية"
+
+#. module: mhma_inventory
+#: model:ir.model,name:mhma_inventory.model_stock_picking
+msgid "Transfer"
+msgstr "تحويل "
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_category__aprvl_type
+#: model:ir.model.fields,field_description:mhma_inventory.field_approval_request__aprvl_type
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__activity_exception_decoration
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__activity_exception_decoration
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__activity_exception_decoration
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_picking_form_my_edit
+msgid "UOM_MHMA"
+msgstr ""
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__unit_cost_mhma
+msgid "Unit Cost MHMA"
+msgstr "التكلفة الوحدة MHMA"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__uom_id
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__uom_id
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_approval_request
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "UoM"
+msgstr "وحدة القياس"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "Update Price"
+msgstr "تحديث السعر"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "Update Quantity"
+msgstr "تحديث الكمية"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.action_inventory_ledger_summary_line_tree
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_form_form_view
+msgid "Valuation Report"
+msgstr "تقرير التقييم"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.inventory_ledger_summary_line_form
+msgid "Valuations"
+msgstr "التقييمات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__valuations_count
+msgid "Valuations Count"
+msgstr "عدد التقييمات"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__value_mhma
+msgid "Value MHMA"
+msgstr "قيمة MHMA"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__standard_pricee
+msgid ""
+"Value of the product (automatically computed in AVCO).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to compute margins on sale orders."
+msgstr ""
+"قيمة المنتج (محسوبة تلقائيًا في AVCO).\n"
+"        تستخدم لتقييم المنتج عندما تكون تكلفة الشراء غير معروفة (مثل تعديل المخزون).\n"
+"        تستخدم لحساب الهوامش في أوامر البيع."
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_product_product__product_template_variant_value_ids
+msgid "Variant Values"
+msgstr "قيم المتغير "
+
+#. module: mhma_inventory
+#: model:ir.model.fields.selection,name:mhma_inventory.selection__res_partner__partner_type__vendor
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_my_edit
+msgid "View Tool"
+msgstr "اداة العرض"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "WH/OUT/00001"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "WH/Outgoing"
+msgstr "WH/الصادر"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "WH/Stock"
+msgstr "WH/المخزون"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product__website_message_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_mhma_demand_product_line__website_message_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_move__website_message_ids
+#: model:ir.model.fields,field_description:mhma_inventory.field_stock_valuation_layer__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product__website_message_ids
+#: model:ir.model.fields,help:mhma_inventory.field_mhma_demand_product_line__website_message_ids
+#: model:ir.model.fields,help:mhma_inventory.field_stock_move__website_message_ids
+#: model:ir.model.fields,help:mhma_inventory.field_stock_valuation_layer__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الموقع"
+
+#. module: mhma_inventory
+#: model:ir.model.fields,field_description:mhma_inventory.field_inventory_ledger_summary_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "فترة المعالجة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/combo_products.py:0
+#, python-format
+msgid "You can not enter negative quantities."
+msgstr "لا يمكنك إدخال كميات سالبة."
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#, python-format
+msgid ""
+"You can't archive a non-canceled move with a non-zero quantity or without "
+"allow_edit."
+msgstr ""
+"لا يمكنك أرشفة حركة غير ملغاة بكمية غير صفرية أو بدون السماح بالتعديل."
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move_valuation.py:0
+#, python-format
+msgid "You can't delete an active valuation layer. Archive it instead."
+msgstr "لا يمكنك حذف طبقة تقييم نشطة. قم بأرشفتها بدلاً من ذلك."
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#, python-format
+msgid ""
+"You cannot assign the same approver multiple times on the same request."
+msgstr "لا يمكنك تعيين نفس المعتمد أكثر من مرة في نفس الطلب."
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/combo_products.py:0
+#: code:addons/mhma_inventory/models/combo_products.py:0
+#, python-format
+msgid "You cannot define a pack product as a service..!"
+msgstr "لا يمكنك تعريف منتج الحزمة كخدمة..!"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/purchase_order.py:0
+#, python-format
+msgid "You must set a Vendor Location for this partner %s"
+msgstr ""
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/combo_products.py:0
+#, python-format
+msgid "You need to add at least one product in the Pack...!"
+msgstr "تحتاج إلى إضافة منتج واحد على الأقل في الحزمة...!"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/combo_products.py:0
+#, python-format
+msgid "You need to add least one product in the Pack...!"
+msgstr "تحتاج إلى إضافة منتج واحد على الأقل في الحزمة...!"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/combo_products.py:0
+#, python-format
+msgid "You need to select the location to update the pack quantity...!"
+msgstr "تحتاج إلى تحديد الموقع لتحديث كمية الحزمة...!"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.rfq_mhma_report
+msgid "________________________________"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "avg_actual_cost"
+msgstr "متوسط التكلفة الفعلية"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "avg_stock_move_line_cost"
+msgstr "متوسط تكلفة بند حركة المخزون"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "qty_move"
+msgstr "كمية الحركة"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_move.py:0
+#, python-format
+msgid "qty_movequantity"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "sum_line_discount"
+msgstr "مجموع خصم البند"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "sum_qty"
+msgstr "مجموع كمية"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.product_template_only_form_view
+msgid "total_cost"
+msgstr "التكلفة الإجمالية"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.stock_move_valuation_tree
+msgid "total_stock_move"
+msgstr "إجمالي حركة المخزون"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.approval_request_form_my_edit
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.purchase_order_my_edit
+msgid "total_sum"
+msgstr "المجموع الكلي"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_stock_delivery
+msgid "units"
+msgstr "وحدات"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "اسم المستلم"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "التوقيع"
+msgstr ""
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: code:addons/mhma_inventory/models/purchase_order.py:0
+#, python-format
+msgid "ففط {} {} و {} فلس لاغير"
+msgstr "فقط {} {} و {} فلس لاغير"
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_picking.py:0
+#, python-format
+msgid "ففط {} ريال يمني و {} فلس لاغير"
+msgstr ""
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/approval_request.py:0
+#: code:addons/mhma_inventory/models/purchase_order.py:0
+#, python-format
+msgid "فقط {} {} لاغير"
+msgstr ""
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_picking.py:0
+#, python-format
+msgid "فقط {} ريال يمني لاغير"
+msgstr ""
+
+#. module: mhma_inventory
+#. odoo-python
+#: code:addons/mhma_inventory/models/stock_picking.py:0
+#, python-format
+msgid "قم بانشاء فاتور شراء"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "محاسب المخازن"
+msgstr ""
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "مدير ادارة المشتريات والمخازن"
+msgstr "مدير إدارة المشتريات والمخازن"
+
+#. module: mhma_inventory
+#: model_terms:ir.ui.view,arch_db:mhma_inventory.report_picking
+msgid "مدير عام الموارد المالية"
+msgstr ""

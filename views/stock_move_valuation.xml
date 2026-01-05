@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="stock_move_valuation_tree" model="ir.ui.view">
+        <field name="name">Stock Move Valuation Tree</field>
+        <field name="model">stock.move</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date" string="Date"/>
+                <field name="picking_id" />
+                <field name="reference" optional="1" />
+                <field name="product_id" string="Product"/>
+                <field name="category_id" optional="1"/>
+                <field name="product_uom" string="UoM" optional="1"/>
+                <field name="inventory_unit" optional="1" />
+                <field name="price_unit" optional="1" />
+                <field name="stock_move_line_cost" avg="avg_stock_move_line_cost" optional="1" />
+                <field name="line_discount" sum="sum_line_discount" optional="1" />
+                <field name="actual_cost" avg="avg_actual_cost" />
+                <field name="qty_move" string="Qty Move" optional="1" sum="qty_move" />
+                <field name="introductory_qty" string="Introductory Qty"/>
+                <field name="introductory_val" />
+                <!-- <field name="quantity" string="Quantity" optional="1"
+                    decoration-danger="(location_usage in ('internal','transit')) and (location_dest_usage not in ('internal','transit'))"
+                    decoration-success="(location_usage not in ('internal','transit')) and (location_dest_usage in ('internal','transit'))"/> -->
+                <field name="incoming_qty" string="Incoming" decoration-success="1" />
+                <field name="incoming_val"  decoration-success="1" />
+                <field name="outgoing_qty" string="Outgoing" decoration-danger="1" />
+                <field name="outgoing_val"  decoration-danger="1" />
+                <field name="final_balance" />
+                <field name="final_balance_val"  />
+                <field name="total_stock_move" optional="1" sum="total_stock_move" />
+                <!-- <field name="partner_id" optional="1" /> -->
+                <field name="partner_move_id" optional="1" />
+                <field name="depart_id" optional="1" />
+                <field name="product_dsbrs_type" optional="1" />
+                <field name="location_id" string="Location" optional="1" />
+                <field name="location_dest_id" string="Destination Location" optional="1" />
+                <field name="state" string="Status"/>
+                <field name="is_inventory" optional="1" />
+                <field name="group_id" optional="1" />
+                <field name="create_date" optional="1" />
+                <field name="create_uid" optional="1" />
+                <field name="write_date" optional="1" />
+                <field name="write_uid" optional="1" />
+                
+            </tree>
+        </field>
+    </record>
+
+    <record id="stock_move_valuation_form" model="ir.ui.view">
+        <field name="name">Stock Move Valuation Form</field>
+        <field name="model">stock.move</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date" />
+                            <field name="reference" />
+                            <field name="picking_id" />
+                            <field name="product_id" />
+                            <field name="category_id" />
+                            <field name="product_uom_category_id" invisible="1" />
+                            <field name="product_uom" />
+                            <field name="inventory_unit" />
+                            <field name="stock_move_line_cost" />
+                            <field name="line_discount" />
+                            <field name="actual_cost" />
+                            <field name="introductory_qty" />
+                            <field name="introductory_val" />
+                            <field name="qty_move" />
+                            <field name="create_date" />
+                            <field name="create_uid" widget="many2one_avatar_user" />
+                            <field name="write_date" />
+                            <field name="write_uid" widget="many2one_avatar_user" />
+                        </group>
+                        <group>
+                            <!-- <field name="partner_id" /> -->
+                            <field name="partner_move_id" />
+                            <field name="depart_id" />
+                            <field name="incoming_qty" />
+                            <field name="incoming_val" />
+                            <field name="outgoing_qty" />
+                            <field name="outgoing_val" />
+                            <field name="final_balance" />
+                            <field name="final_balance_val" />
+                            <field name="total_stock_move" />
+                            <field name="location_id" />
+                            <field name="location_dest_id" />
+                            <field name="state" />
+                            <field name="company_id" />
+                            <field name="group_id" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="desc" string="Description">
+                            <field name="description_picking" />
+                        </page>
+                        <page name="move_lines" string="Move Lines">
+                            <field name="move_line_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- stock_move_valuation_pivot view -->
+    <record id="stock_move_valuation_pivot" model="ir.ui.view">
+        <field name="name">Stock Move Valuation Pivot</field>
+        <field name="model">stock.move</field>
+        <field name="priority" eval="17"/>
+        <field name="arch" type="xml">
+            <pivot string="Stock Valuation Report">
+                <field name="product_id" type="row"/>
+                <field name="introductory_qty" type="measure" />
+                <field name="introductory_val" type="measure" />
+                <field name="incoming_qty" type="measure" />
+                <field name="incoming_val" type="measure" />
+                <field name="outgoing_qty" type="measure" />
+                <field name="outgoing_val" type="measure" />
+                <field name="final_balance" type="measure" />
+                <field name="final_balance_val" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_stock_move_valuation" model="ir.actions.act_window">
+        <field name="name">Stock Move Valuation</field>
+        <field name="res_model">stock.move</field>
+        
+        <field name="context"> {'search_default_done': 1, 'create': 1} </field>
+        <field name="limit">80</field>
+        <!-- <field name="view_id" ref="stock_move_valuation_tree"/>
+        <field name="view_mode">tree,form</field> -->
+        <!-- <field name="view_mode">tree,form,pivot</field> -->
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_stock_move_tree_all_two">
+        <field name="sequence" eval="15"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="stock_move_valuation_tree"/>
+        <field name="act_window_id" ref="action_stock_move_valuation"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_stock_move_form_all_two">
+        <field name="sequence" eval="16"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="stock_move_valuation_form"/>
+        <field name="act_window_id" ref="action_stock_move_valuation"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_stock_move_pivot_all_two">
+        <field name="sequence" eval="17"/>
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="stock_move_valuation_pivot"/>
+        <field name="act_window_id" ref="action_stock_move_valuation"/>
+    </record>
+
+</odoo>

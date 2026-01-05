@@ -1,0 +1,25 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_po_officer_purchase_order,MHMA Officer Purchase Order,purchase.model_purchase_order,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_account_tax,MHMA Officer Account Tax,account.model_account_tax,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_product_template,MHMA Officer Product Template,product.model_product_template,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_stock_picking,MHMA Officer Stock Picking,stock.model_stock_picking,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_res_partner,MHMA Officer Res Partner,base.model_res_partner,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_stock_move,MHMA Officer Stock Move,stock.model_stock_move,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_account_journal,MHMA Officer Account Journal,account.model_account_journal,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_purchase_requisition,MHMA Officer Purchase Requisition,purchase_requisition.model_purchase_requisition,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_account_move,MHMA Officer Account Move,account.model_account_move,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_product_product,MHMA Officer Product Variant,product.model_product_product,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_stock_warehouse,MHMA Officer Stock Warehouse,stock.model_stock_warehouse,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_purchase_order_line,MHMA Officer PO Line,purchase.model_purchase_order_line,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_purchase_requisition_line,MHMA Officer PR Line,purchase_requisition.model_purchase_requisition_line,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_product_packaging,MHMA Officer Product Packaging,product.model_product_packaging,mhma_inventory.mhma_purchase_officer,1,1,1,0
+access_po_officer_purchase_report,MHMA Officer Purchase Report,purchase.model_purchase_report,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_account_analytic_line,MHMA Officer Analytic Line,account.model_account_analytic_line,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_account_partial_reconcile,MHMA Officer Partial Reconcile,account.model_account_partial_reconcile,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_account_account_tag,MHMA Officer Account Tag,account.model_account_account_tag,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_orderpoint,MHMA Officer Reordering Rule,stock.model_stock_warehouse_orderpoint,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_pricelist_item,MHMA Officer Pricelist Item,product.model_product_pricelist_item,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_stock_location,MHMA Officer Stock Location,stock.model_stock_location,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_fiscal_position,MHMA Officer Fiscal Position,account.model_account_fiscal_position,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_uom_uom,MHMA Officer UoM,uom.model_uom_uom,mhma_inventory.mhma_purchase_officer,1,0,0,0
+access_po_officer_picking_type,MHMA Officer Picking Type,stock.model_stock_picking_type,mhma_inventory.mhma_purchase_officer,1,0,0,0

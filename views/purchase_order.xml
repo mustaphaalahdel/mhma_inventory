@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="purchase_order_my_edit" model="ir.ui.view">
+        <field name="name">purchase.order.my.edit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_ref']" position="before">
+                <field name="supplier_id" readonly=" state not in ['draft'] " />
+
+                <field name="partner_id" string="vendor_dev" groups="mhma_inventory.purchase_dev_group" />
+                    
+                <field name="supplier_id" string="Supplier_dev"
+                    groups="mhma_inventory.purchase_dev_group" />
+                <field name="currency_id" string="Currency_dev"
+                    groups="mhma_inventory.purchase_dev_group" />
+            </xpath>
+
+            <!-- نستهدف الزر: name="button_approve" -->
+            <xpath expr="//button[@name='button_approve']" position="attributes">
+                <attribute name="groups">purchase.group_purchase_manager,mhma_inventory.mhma_purchase_inventory_manager</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='partner_ref']" position="after">
+            </xpath>
+
+            <xpath expr="//field[@name='picking_type_id']" position="after">
+            </xpath>
+
+            <xpath expr="//page[@name='purchase_delivery_invoice']" position="after">
+                <page name="demand_products" string="Demand Products Lines">
+                    <group>
+                        <group>
+                            <field name="approval_purchase_specifications_id" />
+                            <field
+                                name="confirmed_demand_product_lines"
+                                readonly=" confirmed_demand_product_lines == True "
+                                force_save="1"
+                                groups="!purchase.group_purchase_manager" />
+                            <field name="confirmed_demand_product_lines"
+                                groups="purchase.group_purchase_manager" />
+                        </group>
+                        <group>
+                            <field
+                                name="approval_purchase_request_id"
+                                readonly="approval_purchase_specifications_id"
+                                string="Purchase Request or Purchasing Directive" force_save="1" />
+                            <field name="request_ref_id" string="Request Reference" force_save="1" />
+                        </group>
+                    </group>
+                    <field name="demand_product_line_ids"
+                        readonly=" state not in ['draft', 'sent'] " force_save="1">
+                        <tree editable="1">
+                            <field name="sequence" widget="handle" />
+                            <field name="demand_product_id"
+                                readonly=" confirmed_demand_product_lines == True " />
+                            <field name="desc" readonly=" confirmed_demand_product_lines == True " />
+                            <field name="qty" readonly=" confirmed_demand_product_lines == True " />
+                            <field name="estimate_cost"
+                                readonly=" confirmed_demand_product_lines == True " />
+                            <field name="uom_id" readonly="1" force_save="1" />
+                            <field name="detail" column_invisible="1" />
+
+                            <field name="modified_desc" readonly="1"
+                                groups="!purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_qty" readonly="1"
+                                groups="!purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_estimate_cost" readonly="1"
+                                groups="!purchase.group_purchase_manager" force_save="1" />
+
+                            <field name="modified_desc"
+                                readonly=" confirmed_demand_product_lines == False "
+                                groups="purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_qty"
+                                readonly=" confirmed_demand_product_lines == False "
+                                groups="purchase.group_purchase_manager" force_save="1" />
+                            <field name="modified_estimate_cost"
+                                readonly=" confirmed_demand_product_lines == False "
+                                groups="purchase.group_purchase_manager" force_save="1" />
+
+                            <field name="modified_detail" column_invisible="1" />
+                            <field name="total" sum="total_sum" />
+
+                            <button name="action_view_tool_to_purchase" type="object"
+                                string="View Tool" />
+
+                            <field name="purchase_state" optional="1" />
+                            <field name="confirmed_demand_product_lines" column_invisible="1" />
+
+                            <field name="create_date" optional="1" />
+                            <field name="create_uid" optional="1" />
+                            <field name="write_date" optional="1" />
+                            <field name="write_uid" optional="1" />
+
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_order_tree_my_edit" model="ir.ui.view">
+        <field name="name">purchase.order.tree.my.edit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_kpis_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="supplier_id" optional="0" />
+            </xpath>
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="approval_purchase_specifications_id" optional="1" />
+                <field name="approval_purchase_request_id"
+                    string="Purchase Request or Purchasing Directive" optional="1" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

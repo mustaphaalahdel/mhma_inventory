@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!-- ✅ أضِف الجروب لهذه القوائم فقط -->
+
+    <!-- Purchase (App icon) -->
+    <record id="purchase.menu_purchase_root" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_purchase_read_only_all_group'))]"/>
+    </record>
+
+    <!-- Purchase / Reporting -->
+    <record id="purchase.purchase_report_main" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_purchase_read_only_all_group'))]"/>
+    </record>
+
+    <!-- Purchase / Reporting / Purchase -->
+    <record id="purchase.purchase_report" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_purchase_read_only_all_group'))]"/>
+    </record>
+
+    <!-- Purchase / Configuration -->
+    <record id="purchase.menu_purchase_config" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_purchase_read_only_all_group'))]"/>
+    </record>
+
+    <!-- قوائمك في موديول mhma_purchase -->
+    <record id="mhma_purchase.menu_purchase_mhma" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_purchase_read_only_all_group'))]"/>
+    </record>
+
+    <record id="mhma_purchase.menu_purchase_order_line_detail" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4, ref('mhma_inventory.mhma_purchase_read_only_all_group'))]"/>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,196 @@
+<odoo>
+    <record id="view_stock_picking" model="ir.ui.view">
+        <field name="name">stock.picking.form.check</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+
+            <page name="extra" position="after">
+                <page string="Returns">
+                    <field name="return_ids" readonly="1" />
+                </page>
+            </page>
+
+            <xpath expr="//header/button[@name='button_validate']" position="after">
+                <button name="action_stock_picking" string="Print Pick" type="object"
+                    class="btn-primary"
+                /><!--invisible="payment_method_id.code
+                in ['check']", invisible="state != 'assigned'"-->
+            </xpath>
+            <xpath expr="//field[@name='location_id']" position="after">
+                <field
+                    name="location_id"
+                    invisible="picking_type_code == 'incoming'"
+                    groups="mhma_inventory.inventory_dev_group"
+                />
+            </xpath>
+
+            <xpath expr="//label[@for='scheduled_date']" position="before">
+                <field name="statement_subject" />
+            </xpath>
+
+            <xpath expr="//field[@name='location_dest_id']" position="after">
+                <field
+                    name="location_dest_id"
+                    invisible="picking_type_code == 'outgoing'"
+                    string="Location Dest Div"
+                    groups="mhma_inventory.inventory_dev_group"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_picking_form_my_edit" model="ir.ui.view">
+        <field name="name">stock.picking.form.my.edit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_cancel']" position="after">
+                <button type="object" groups="stock.group_stock_user"
+                    name="button_send_to_recipient" class="btn-warning" string="Reminder recipient"
+                    invisible="state not in ['assigned', 'done']  or partner_user_id == 0 or is_send_to_recipient == 1 or is_req_revieve "></button>
+                <button type="object" groups="stock.group_stock_user"
+                    name="button_send_to_recipient" class="btn-secondary"
+                    string="Reminder recipient"
+                    invisible="state not in ['assigned', 'done'] or partner_user_id == 0 or is_send_to_recipient == 0 or is_req_revieve "></button>
+                <!-- <button type="object" name="schedule_grant_approval" string="Grant Approval"
+                ></button> -->
+                <button type="object" name="button_approve" class="btn-warning"
+                    string="Received Done"
+                    invisible="state not in ['assigned', 'done']  or is_req_revieve or partner_user_id != uid" />
+            </xpath>
+
+            <xpath expr="//field[@name='group_id']" position="after">
+                <field name="purchase_order_id" />
+            </xpath>
+
+            <field name="scheduled_date" position="attributes">
+                <attribute name="readonly">
+                    state in ['cancel']
+                </attribute>
+            </field>
+
+            <field name="move_ids_without_package" position="attributes">
+                <!-- <attribute name="readonly">
+                    state in ['cancel']
+                </attribute> -->
+            </field>
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="partner_id" groups='mhma_inventory.inventory_dev_group' />
+                <field name="depart_id" />
+                <field name="partner_user_id" string="Recipient" />
+                <field name="is_send_to_recipient" invisible="1" />
+
+                <field name="is_req_revieve" invisible="1" />
+            </xpath>
+
+            <page name="extra" position="inside">
+                <group name="receiving_info" string="Receiving information">
+                    <field name="is_req_revieve" invisible="state not in ['assigned', 'done'] "
+                        groups='stock.group_stock_manager' />
+                </group>
+            </page>
+
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="total_cost_all" />
+                <field name="total_cost_all_txt" />
+                <!-- <field name="default_currency_id" /> -->
+                <field name="approval_id" readonly="1" force_save="1" />
+                <field name="approval_disbursing_directive_id" />
+            </xpath>
+
+            <button name="action_product_forecast_report" icon="fa-area-chart" position="attributes">
+                <attribute name="invisible">
+                    True
+                </attribute>
+            </button>
+            <button name="action_product_forecast_report" icon="fa-area-chart text-danger"
+                position="attributes">
+                <attribute name="invisible">
+                    True
+                </attribute>
+            </button>
+
+            <xpath
+                expr="//notebook/page/field[@name='move_ids_without_package']"
+                position="before"
+            >
+                <field name="max_line_sequence" invisible="1" />
+            </xpath>
+            <xpath
+                expr="/form/sheet/notebook[1]/page[1]/field[@name='move_ids_without_package']/tree/field[@name='product_id']"
+                position="before">
+
+                <field name="sequence" widget="handle" />
+                <field name="sequence2" optional="1" groups="mhma_inventory.inventory_dev_group" />
+
+                <field name="product_ref" optional="1" />
+                <field name="product_name" optional="1" />
+            </xpath>
+            <xpath
+                expr="/form/sheet/notebook[1]/page[1]/field[@name='move_ids_without_package']/tree/field[@name='product_id']"
+                position="after">
+                <field name="category_name" optional="1" />
+            </xpath>
+
+            <xpath
+                expr="/form/sheet/notebook[1]/page[1]/field[@name='move_ids_without_package']/tree/field[@name='product_uom']"
+                position="attributes">
+                <attribute name="readonly">
+                    1
+                </attribute>
+            </xpath>
+
+            <xpath
+                expr="/form/sheet/notebook[1]/page[1]/field[@name='move_ids_without_package']/tree/button[@name='action_assign_serial']"
+                position="after">
+                <field name="product_uom" column_invisible="1" string="UOM_MHMA" />
+                <field
+                    name="product_uom"
+                    string="UOM_MHMA"
+                    groups="mhma_inventory.inventory_dev_group"
+                    optional="1"
+                />
+                <field name="qty_stock_move" optional="1" />
+                <field name="introductory_qty" optional="1" />
+                <field name="standard_pricee" optional="1" />
+                <field name="stock_move_line_cost" optional="1" />
+                <field name="line_discount" optional="1" />
+                <field name="actual_cost" optional="1" />
+                <field name="price_unit" optional="1" />
+                <field name="qty_availablee" optional="1" />
+                <field name="qty_in_source_location" optional="1" />
+                <field name="virtual_availablee" optional="1" />
+                <field name="total_stock_move" optional="1" sum="Total Stock Move" />
+                <!-- <field name="product_dsbrs_type" optional="1" /> -->
+                <field name="state" optional="1" />
+                <button type="object" name="action_product_forecast_report" title="Forecast Report"
+                    icon="fa-area-chart"
+                    invisible="quantity == 0 and forecast_availability &lt;= 0 or (parent.picking_type_code == 'outgoing' and state != 'draft')" />
+                <button type="object" name="action_product_forecast_report" title="Forecast Report"
+                    icon="fa-area-chart text-danger"
+                    invisible="quantity &gt; 0 or forecast_availability &gt;= 0 or (parent.picking_type_code == 'outgoing' and state != 'draft')" />
+                <button type="object" name="action_product_forecast_report" title="Forecast Report"
+                    icon="fa-area-chart text-warning"
+                    invisible="quantity != 0 or forecast_availability != 0 or (parent.picking_type_code == 'outgoing' and state != 'draft')" />
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="stock_picking_list_my_edit" model="ir.ui.view">
+        <field name="name">stock.picking.list.my.edit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='scheduled_date']" position="after">
+                <field name="depart_id" optional="1" />
+                <field name="is_req_revieve" optional="1" />
+            </xpath>
+        </field>
+
+    </record>
+
+</odoo>

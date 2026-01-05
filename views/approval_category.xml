@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="approval_category_my_edit" model="ir.ui.view">
+        <field name="name">approval.category.my.edit</field>
+        <field name="model">approval.category</field>
+        <field name="inherit_id" ref="approvals.approval_category_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                <field name="symbol" readonly=" automated_sequence " />
+                <field name="aprvl_type" />
+                <field name="access_group_ids" widget="many2many_tags" />
+            </xpath>
+
+            <xpath expr="//field[@name='manager_approval']" position="after">
+                <field name="manager_manager_approval" />
+                <field name="manager_manager_manager_approval" />
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

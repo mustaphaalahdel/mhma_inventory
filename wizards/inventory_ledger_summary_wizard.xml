@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inventory_ledger_summary_form" model="ir.ui.view">
+        <field name="name">Inventory Ledger Summary Form</field>
+        <field name="model">inventory.ledger.summary.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date_from" string="Period" widget="daterange"
+                                options="{'end_date_field': 'date_to'}" />
+                            <field name="date_to" invisible="1" />
+                        </group>
+                    </group>
+                    <separator
+                        string="If you do not specify categories or products, it will give a summary of all products." />
+                    <group>
+                        <field name="categ_ids" widget="many2many_tags"
+                            options="{'no_create': True}" />
+                        <field name="product_ids" widget="many2many_tags"
+                            options="{'no_create': True}" />
+                    </group>
+                    <footer>
+                        <button name="action_get_stock_summary" string="Get Summary" type="object"
+                            class="btn-primary" />
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="inventory_ledger_summary_action" model="ir.actions.act_window">
+        <field name="name">Inventory Ledger Summary</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">inventory.ledger.summary.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+</odoo>
