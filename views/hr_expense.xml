@@ -10,18 +10,18 @@
             <button name="action_split_wizard" position="after">
                 <button type="object" 
                     name="action_reminder_recipient" class="btn-warning" string="Reminder recipient"
-                    invisible="state in ['refused']  or recipient_id == 0 or reminder_recipient == 1 or confirm_receipt or employee2_user_id != uid "></button>
+                    invisible="state in ['refused']  or recipient_id == 0 or reminder_recipient == 1 or confirm_receipt or employee_recipient_user_id != uid "></button>
                 <button type="object" 
                     name="action_reminder_recipient" class="btn-secondary"
                     string="Reminder recipient"
-                    invisible="state in ['refused'] or recipient_id == 0 or reminder_recipient == 0 or confirm_receipt or employee2_user_id != uid  "></button>
+                    invisible="state in ['refused'] or recipient_id == 0 or reminder_recipient == 0 or confirm_receipt or employee_recipient_user_id != uid  "></button>
                 <!-- <button type="object" 
                     name="action_reminder_recipient" class="btn-warning" string="Reminder recipient"
-                    groups='hr_expense.group_hr_expense_manager,mhma_inventory.inventory_dev_group'
+                    groups='hr_expense.group_hr_expense_manager,gia_inventory.inventory_dev_group'
                     invisible="state in ['refused']  or recipient_id == 0 or reminder_recipient == 1 or confirm_receipt "></button>
                 <button type="object"
                     name="action_reminder_recipient" class="btn-secondary"
-                    groups='hr_expense.group_hr_expense_manager,mhma_inventory.inventory_dev_group'
+                    groups='hr_expense.group_hr_expense_manager,gia_inventory.inventory_dev_group'
                     string="Reminder recipient"
                     invisible="state in ['refused'] or recipient_id == 0 or reminder_recipient == 0 or confirm_receipt "></button> -->
                 
@@ -40,8 +40,8 @@
                         <field name="approval_direct_purchase_id" />
                         <field name="reminder_recipient" groups='hr_expense.group_hr_expense_manager,mhma_inventory.inventory_dev_group' />
                         <field name="reminder_recipient" invisible="1" />
-                        <field name="employee2_id" />
-                        <field name="employee2_user_id" />
+                        <field name="employee_recipient_id" />
+                        <field name="employee_recipient_user_id" />
                     </group>
                     <group>
                         <field name="beneficiary_id" />

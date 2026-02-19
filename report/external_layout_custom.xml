@@ -11,7 +11,7 @@
                 <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
                     <t t-set="company" t-value="o.company_id.sudo()"/>
                 </t>
-                <t t-else="else">
+                <t t-else="">
                     <t t-set="company" t-value="res_company"/>
                 </t>
             </t>

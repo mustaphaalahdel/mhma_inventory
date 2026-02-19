@@ -16,6 +16,15 @@
         <record id="stock_keeper_approval_group" model="res.groups">
             <field name="name">Stock keeper Approval</field>
         </record>
+
+        <record id="add_vendor_approval_group" model="res.groups">
+            <field name="name">Add Vendor Approval</field>
+        </record>
+        <record id="add_customer_approval_group" model="res.groups">
+            <field name="name">Add Customer Approval</field>
+        </record>
+
+        
         <record id="request_items_needed_group" model="res.groups">
             <field name="name">Request Items needed</field>
         </record>

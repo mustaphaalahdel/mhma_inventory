@@ -34,5 +34,3 @@ access_sk_choose_delivery_package,MHMA StockKeeper Choose Delivery Package,stock
 access_sk_choose_delivery_carrier,MHMA StockKeeper Choose Delivery Carrier,delivery.model_choose_delivery_carrier,mhma_inventory.mhma_stock_keeper,1,1,1,0
 access_sk_orderpoint_snooze,MHMA StockKeeper Orderpoint Snooze,stock.model_stock_orderpoint_snooze,mhma_inventory.mhma_stock_keeper,1,1,1,0
 access_sk_barcode_nomenclature,MHMA StockKeeper Barcode Nomenclature,barcodes.model_barcode_nomenclature,mhma_inventory.mhma_stock_keeper,1,0,0,0
-access_sk_import_wizard,MHMA StockKeeper Picking Import Wizard,mhma_stock_picking_import.model_mhma_stock_picking_import_wizard,mhma_inventory.mhma_stock_keeper,1,1,1,0
-access_sk_import_wizard_line,MHMA StockKeeper Picking Import Wizard Line,mhma_stock_picking_import.model_mhma_stock_picking_import_wizard_line,mhma_inventory.mhma_stock_keeper,1,1,1,0

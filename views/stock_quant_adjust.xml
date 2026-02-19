@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_stock_quant_tree_inventory_editable_inherit_reserved" model="ir.ui.view">
+        <field name="name">stock.quant.tree.inventory.editable.inherit.reserved</field>
+        <field name="model">stock.quant</field>
+        <field name="inherit_id" ref="stock.view_stock_quant_tree_inventory_editable"/>
+        <field name="arch" type="xml">
+
+            <!-- إظهار reserved_quantity -->
+            <xpath expr="//field[@name='quantity']" position="after">
+                <field name="reserved_quantity" optional="show"/>
+            </xpath>
+
+            <!-- زر "إلغاء الحجز" في الهيدر -->
+            <xpath expr="//tree/header" position="inside">
+                <button
+                    name="action_clear_ghost_reserved"
+                    type="object"
+                    string="Unreserve (Selected)"
+                    class="oe_highlight"
+                    groups="stock.group_stock_manager"
+                />
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

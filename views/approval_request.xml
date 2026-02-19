@@ -45,10 +45,10 @@
                     invisible="request_status != 'approved' or aprvl_type != '4'" />
 
                 <button name="action_add_vendor" string="Add Vendor" type="object"
-                    class="oe_highlight" groups="purchase.group_purchase_manager,mhma_inventory.mhma_purchase_inventory_manager,mhma_inventory.purchase_dev_group"
+                    class="oe_highlight" groups="mhma_inventory.add_vendor_approval_group"
                     invisible="request_status != 'approved' or aprvl_type not in ['10'] or len_partner_ids != 0  " />
                 <button name="action_add_customer" string="Add Customer" type="object"
-                    class="oe_highlight" groups="sales_team.group_sale_manager"
+                    class="oe_highlight" groups="mhma_inventory.add_customer_approval_group"
                     invisible="request_status != 'approved' or aprvl_type not in ['10'] or len_partner_ids != 0  " />
                 <button name="action_add_partner" string="Add Partner" type="object"
                     class="btn-default" groups="stock.group_stock_manager"

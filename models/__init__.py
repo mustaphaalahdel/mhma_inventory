@@ -23,4 +23,7 @@ from . import combo_products
 
 from . import stock_move_valuation
 from . import hr_expense
+from . import stock_quant
+from . import stock_picking_seq
+
 

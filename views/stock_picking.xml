@@ -26,6 +26,7 @@
             </xpath>
 
             <xpath expr="//label[@for='scheduled_date']" position="before">
+                <field name="order_number" />
                 <field name="statement_subject" />
             </xpath>
 
@@ -146,10 +147,10 @@
             <xpath
                 expr="/form/sheet/notebook[1]/page[1]/field[@name='move_ids_without_package']/tree/button[@name='action_assign_serial']"
                 position="after">
-                <field name="product_uom" column_invisible="1" string="UOM_MHMA" />
+                <field name="product_uom" column_invisible="1" string="UOM_GIA" />
                 <field
                     name="product_uom"
-                    string="UOM_MHMA"
+                    string="UOM_GIA"
                     groups="mhma_inventory.inventory_dev_group"
                     optional="1"
                 />
@@ -185,7 +186,12 @@
         <field name="model">stock.picking</field>
         <field name="inherit_id" ref="stock.vpicktree" />
         <field name="arch" type="xml">
+
+            <field name="name" position="after">
+                <field name="order_number" optional="1" />
+            </field>
             <xpath expr="//tree/field[@name='scheduled_date']" position="after">
+                
                 <field name="depart_id" optional="1" />
                 <field name="is_req_revieve" optional="1" />
             </xpath>

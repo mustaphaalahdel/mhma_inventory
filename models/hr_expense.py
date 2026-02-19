@@ -4,27 +4,27 @@ from odoo.exceptions import UserError, ValidationError
 class HrExpense(models.Model):
     _inherit = 'hr.expense'
 
-    employee2_id = fields.Many2one(
+    employee_recipient_id = fields.Many2one(
         comodel_name='hr.employee',
-        string='Employee2',
-        compute='_compute_employee2_id',
+        string='Employee recipient',
+        compute='_compute_employee_recipient_id',
     )
 
     @api.depends('employee_id')
-    def _compute_employee2_id(self):
+    def _compute_employee_recipient_id(self):
         for rec in self:
-            rec.employee2_id = rec.employee_id
+            rec.employee_recipient_id = rec.employee_id
 
-    employee2_user_id = fields.Many2one(
+    employee_recipient_user_id = fields.Many2one(
         comodel_name='res.users',
-        string='Employee2 User',
-        related='employee2_id.user_id',
+        string='Employee recipient User',
+        related='employee_recipient_id.user_id',
         # compute='_compute_employee2_user_id',
     )
-    # @api.depends('employee2_id')
+    # @api.depends('employee_recipient_id')
     # def _compute_employee2_user_id(self):
     #     for rec in self:
-    #         rec.employee2_user_id = rec.employee2_id.user_id
+    #         rec.employee2_user_id = rec.employee_recipient_id.user_id
 
     approval_direct_purchase_id = fields.Many2one(
         comodel_name='approval.request', 

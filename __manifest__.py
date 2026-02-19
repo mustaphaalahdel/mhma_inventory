@@ -4,6 +4,8 @@
     'summary': '',
     'author': 'MHMA',
     'category': 'Inventory',
+    
+    
     'depends': [
         'base',
         'stock', 
@@ -14,8 +16,6 @@
         'purchase_stock', 
         'stock_delivery', 
         'purchase_requisition_stock', 
-        'mhma_stock_no_negative', 
-        'mhma_stock_picking_import', 
         'product_expiry',
         'product', 
         'hr', 
@@ -24,7 +24,9 @@
         'mail', 
         'repair',
         'hr_expense',
-        'mhma_purchase',
+        # 'gia_stock_no_negative', 
+        # 'gia_stock_picking_import', 
+        # 'gia_purchase',
         ],
     'data': [
         "security/security.xml",
@@ -59,11 +61,14 @@
         'views/hr_expense.xml',
         'views/menu.xml',
         'views/menu_approval.xml',
+        'views/stock_quant_adjust.xml',
         'wizards/approval_rejection_reason.xml',
         'wizards/inventory_ledger_summary_wizard.xml',
         'wizards/inventory_ledger_summary_wizard_line.xml',
         'views/menu/purchase_readonly_menu_inherit.xml',
         'views/menu/inventory_readonly_menu_inherit.xml',
+
+
 
     ],
     'installable': True,

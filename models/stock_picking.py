@@ -1,7 +1,7 @@
 from odoo import _, models, fields, api
 from odoo.exceptions import UserError, ValidationError
 import re
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 from lxml import etree
 
 class StockPicking(models.Model):
@@ -10,6 +10,7 @@ class StockPicking(models.Model):
     active = fields.Boolean(default=True, tracking=True)
 
     statement_subject = fields.Char(string='Statement Subject', tracking=True)
+    
 
     date_done = fields.Datetime('Date of Transfer', tracking=True, copy=False, readonly=False, help="Date at which the transfer has been processed or cancelled.")
     depart_id = fields.Many2one(comodel_name="hr.department", string='Department', store=True, compute='_compute_depart_id', readonly=0, copy=True)
@@ -374,4 +375,32 @@ class StockPicking(models.Model):
                 element.set("context", context)
             res["arch"] = etree.tostring(doc, encoding="unicode")
         return res
+
+
+    def _resequence_yearly_operations(self):
+        for record in self:
+            if not record.scheduled_date or not record.picking_type_id:
+                continue
+
+            year = fields.Date.from_string(record.scheduled_date).year
+            date_from = f'{year}-01-01'
+            date_to = f'{year}-12-31'
+
+            domain = [
+                ('picking_type_id', '=', record.picking_type_id.id),
+                ('scheduled_date', '>=', date_from),
+                ('scheduled_date', '<=', date_to),
+                ('state', '!=', 'cancel'),
+            ]
+
+            pickings = self.search(
+                domain,
+                order='scheduled_date asc, id asc'
+            )
+
+            number = 1
+            for picking in pickings:
+                picking.order_number = number
+                number += 1
+                
 
